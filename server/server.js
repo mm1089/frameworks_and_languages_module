@@ -61,10 +61,10 @@ app.post('/api/v2/items', (req, res) => {
 //if set use this, if not use 3000, store result in const
 //assign a port of 3000 permanently
 
-const portNum = process.env.portNum || 3000;
-app.listen(3000, () => console.log(`'Listening on port ${portNum}... Test'`))
+const portNum = process.env.portNum || 3001;
+app.listen(3001, () => console.log(`'Listening on port ${portNum}... Test'`))
 
 //encapsulating in `` allows javascript code to be used in string
 //browser window shows Testing Allan Assignment on blank page
 //this is working as intended
-//node app.js to run
+//node server.js to run
