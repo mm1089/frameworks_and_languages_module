@@ -13,20 +13,20 @@ const testing = [
     {id: 1, name: 'test1'},
     {id: 2, name: 'test2'},
     {id: 3, name: 'test3'},
-    {id: 4, name: 'test3'},
-    {id: 5, name: 'test3'}
+    {id: 4, name: 'test4'},
+    {id: 5, name: 'test5'}
 ];
 
 app.get('/', (req, res) => {
-    res.send('Testing Allan Assignment');
+    res.send('FreeCycle');
 });
 
 //array of numbers used to test
-app.get('/api/test', (req, res) => {
+app.get('/api/v2', (req, res) => {
     res.send(testing);
 });
 
-app.get('/api/test/:id', (req, res) => {
+app.get('/api/v2/item/:id', (req, res) => {
     let = test.find(c => c.id === parseInt(req.params.id))
 });
 
