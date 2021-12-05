@@ -1,9 +1,15 @@
 const { response } = require('express');
 const express = require('express');
+const items = require('./items');
+const PORT = 3000;
+const JOI = require('joi');
 const app = express();
 
 app.use(express.json());
 //use Middleware in request processing 
+
+//Used to store hardcoded item data here
+//Moved to ./items.js
 
 //load express module
 //express function / app object for methods like GET POST PUT DELETE
@@ -13,54 +19,100 @@ app.use(express.json());
 //route - specify thr path or url with '/'
 //callback function which is referred to as a route handler
 
-const items = [
-    {id: 1, name: 'item1'},
-    {id: 2, name: 'item2'},
-    {id: 3, name: 'item3'},
-    {id: 4, name: 'item4'},
-    {id: 5, name: 'item5'}
-];
-
 app.get('/', (req, res) => {
     res.send('FreeCycle');
 });
 
+//req - incoming
+//res - outgoing
 //array of numbers used to test
-app.get('/api/v2/items', (req, res) => {
-    res.send(items);
+
+app.get('/v2/item', (req, res) => {
+    res.status(200);
+    res.send({items});
 });
 
-app.get('/api/v2/items/:id', (req, res) => {
-    let item = items.find(c => c.id === parseInt(req.params.id));
-    if (!item) res.status(404).send('Error: 404 - The item with the given ID was not found.');
-    res.send(item);
+app.get('/v2/item/:id', (req, res) => {
+    const id = items.find(i => i.id === parseInt(req.params.id));
+    if (!id) res.status(404).send('Error: 404 - The item with the given ID was not found.');
+    res.send(id);
 });
 
 // Error 404 - object not found
 // Error 400 - bad request
 
-app.post('/api/v2/items', (req, res) => {
-  if (!req.body.name || req.body.name.length < 1) {
-      res.status(400).send('Error: 400 - Bad Request, the item entered does not meet the validation rules.')
+app.post('/v2/items', (req, res) => {
+  if (!req.body.user_id || req.body.name.length < 1) {
+      res.status(400).send('Error: 400 - Bad Request, user ID entered does not meet the validation rules. Cannot be less than 1 char!')
       return;
   }
-
-    const item = {
+    const createItem = {
         id: items.length + 1,
-        name: req.body.name
+        user_id: req.body.name,
+        keywords: [req.body.keywords],
+        description: req.body.description,
+        image: req.body.image,
+        latitude: require.body.latitude,
+        longitude: require.body.longitude
     };
-    items.push(item);
-    res.send(item);
+    items.push(createItem);
+    res.send(createItem);
 });
 
 // In future the ID will be assigned by a database, I have to create here
-//testing reading parameter
+
+app.put('/v2/items/:id', (req, res) => {
+    let id = req.params.id;
+    let user_id = req.body.user_id;
+    let keywords = [req.body.keywords];
+    let description = req.body.description;
+    let latitude = req.body.latitude;
+    let longitude = req.body.longitude;
+
+    
+    let put = items.findIndex((createItem)=> {
+        return(createItem.id == Number.parseInt(id))
+    })
+    if (!id) res.status(404).send('Error: 404 - The item with the given ID was not found.');
+
+    if(put < 0){
+        const xxx = items[put]
+        items.user_id = user_id
+        items.keywords = keywords
+        items.description = description
+        items.image = image
+        items.latitude = latitude
+        items.longitude = longitude
+        res.json(items)
+    }
+    else{
+        res.status(404).send('Error: 404 - The item with the given ID was not found.');
+    }
+})
+
+
+app.delete('/v2/delete/:id', (res, req)=> {
+    let item_id = req.params.id;
+    let index = items.findIndex((createItem)=> {
+        return createItem.id === Number.parseInt(id)
+    })
+    if(index >= 0){
+        let xxx = createItem[index]
+        xxx.splice(index, 1)
+    }
+    else{
+        res.status(404).send('Error: 404 - The item with the given ID was not found.'); 
+    }
+})
+
 //port handling
 //if set use this, if not use 3000, store result in const
 //assign a port of 3000 permanently
 
-const portNum = process.env.portNum || 3001;
-app.listen(3001, () => console.log(`'Listening on port ${portNum}... Test'`))
+app.listen(
+    PORT, () => console.log(`Open on PORT: ${PORT}`)
+);
+
 
 //encapsulating in `` allows javascript code to be used in string
 //browser window shows Testing Allan Assignment on blank page

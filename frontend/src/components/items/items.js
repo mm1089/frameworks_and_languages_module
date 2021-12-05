@@ -4,8 +4,9 @@ function Items() {
   return (
     <div className="Items">
       <section className="p-1">
-        <div className="shadow rounded-md">
+        <div className="shadow rounded-md bg-gray-50">
         <h2 className="text-xl font-semibold px-2 py-1">New Item</h2>
+        <p className="text-gray-600 items-end text-xs ">[React Sub-Component "Items"]</p>
         </div>
       </section>
       <section className="p-3 items-center">
