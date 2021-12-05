@@ -1,7 +1,9 @@
 DOCKER_IMAGE:=server
 
 build:
-	docker build --tag ${DOCKER_IMAGE} .
+	docker build server.js ${DOCKER_IMAGE} .
 
 test:
 	docker run --rm ${DOCKER_IMAGE}
+
+

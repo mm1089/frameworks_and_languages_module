@@ -45,8 +45,6 @@ app.post('/api/v2/items', (req, res) => {
       return;
   }
 
-// In future the ID will be assigned by a database, I have to create here 
-
     const item = {
         id: items.length + 1,
         name: req.body.name
@@ -55,7 +53,7 @@ app.post('/api/v2/items', (req, res) => {
     res.send(item);
 });
 
-
+// In future the ID will be assigned by a database, I have to create here
 //testing reading parameter
 //port handling
 //if set use this, if not use 3000, store result in const
