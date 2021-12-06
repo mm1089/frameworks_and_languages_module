@@ -6,7 +6,7 @@ const server = http.createServer((req,res)=> {
         res.end();
     }
 
-    if(req.url === '/item/') {
+    if(req.url === '/v2/item/') {
         res.write(JSON.stringify['0'])
         res.end();
     }
