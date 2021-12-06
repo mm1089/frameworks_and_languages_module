@@ -10,7 +10,6 @@ app.use(express.json());
 
 //Used to store hardcoded item data here
 //Moved to ./items.js
-
 //load express module
 //express function / app object for methods like GET POST PUT DELETE
 //callback function two arguments request and response
@@ -20,7 +19,8 @@ app.use(express.json());
 //callback function which is referred to as a route handler
 
 app.get('/', (req, res) => {
-    res.send('FreeCycle');
+    res.send("FreeCycle API Implementation for Allan's assignment 2");
+    //if (X) res.status(404).send('Error: 404 - The item was not found.');
 });
 
 //req - incoming
@@ -92,13 +92,13 @@ app.put('/v2/items/:id', (req, res) => {
 
 
 app.delete('/v2/delete/:id', (res, req)=> {
-    let item_id = req.params.id;
+    let id = req.params.id;
     let index = items.findIndex((createItem)=> {
         return createItem.id === Number.parseInt(id)
     })
-    if(index >= 0){
-        let xxx = createItem[index]
-        xxx.splice(index, 1)
+    if(server >= 0){
+        let xxx = createItem[server] //is this right? server.js could be index
+        xxx.splice(server, 1)
     }
     else{
         res.status(404).send('Error: 404 - The item with the given ID was not found.'); 

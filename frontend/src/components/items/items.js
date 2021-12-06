@@ -4,10 +4,10 @@ function Items() {
   return (
     <div className="Items">
       <section className="p-1">
-        <div className="shadow rounded-md bg-gray-50">
-        <h2 className="text-xl font-semibold px-2 py-1">New Item</h2>
-          <div className=" rounded-full b-2 p-2 bg-green-100 w-48">
-            <p className="text-gray-600 items-end text-xs ">[React Sub-Component "Items"]</p>
+        <div className="shadow rounded-md bg-gray-200">
+        <h2 className="pl-4 text-xl font-semibold px-2 py-1">New Item</h2>
+          <div className="pl-4 rounded-full b-2 p-2 bg-green-100 w-52 mb-2 p-2">
+            <p className="text-gray-800 items-end text-xs font-semibold">[React Sub-Component "Items"]</p>
           </div>
         </div>
       </section>
@@ -26,6 +26,7 @@ function Items() {
         <h2 className="pl-3 items-start text-l font-semibold">Items</h2>
       </section>
     </div>
+    
   );
 }
 
