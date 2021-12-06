@@ -1,6 +1,6 @@
 const { response } = require('express');
 const express = require('express');
-const items = require('./items');
+const items = require('../serverOLD/items');
 const PORT = 3000;
 const JOI = require('joi');
 const app = express();
