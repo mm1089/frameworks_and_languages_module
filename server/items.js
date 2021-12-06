@@ -1,22 +1,12 @@
-const items = 
-//data store copy paste from open api
-[{
-    "id": 0,
-    "user_id": "Michael",
-    "keywords": [
-      "test1",
-      "cool1",
-      "tail1"
-    ],
-    "description": "something cool",
-    "image": "https://placekitten.com/300/300",
-    "latitude": 69.0181337,
-    "longitude": 4.2012069,
-    "date_from": "2021-12-24T14:19:22Z",
-    "date_to": "2021-12-24T14:09:22Z"
-  }];
-
-
-  
-
-    module.exports = items
+const items = {
+  1: {
+      "id": 1,
+      "user_id": "user1234",
+      "keywords": ["hammer", "nails", "tools"],
+      "description": "A hammer and nails set",
+      "lat": 1,
+      "lon": 1,
+      "date_from": "2021-11-22T08:22:39.067408",
+  }
+}
+NEXT_ID = max(ITEMS.keys()) + 1

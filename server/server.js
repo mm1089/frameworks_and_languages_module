@@ -1,8 +1,9 @@
 const { response } = require('express');
 const express = require('express');
-const items = require('../serverOLD/items');
-const PORT = 3000;
-const JOI = require('joi');
+const items = require('./items');
+const PORT = 8000;
+// serve on 0.0.0.0
+//const JOI = require('joi');
 const app = express();
 
 app.use(express.json());

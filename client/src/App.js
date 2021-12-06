@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Items from './components/items/items'
+import Items from './components/items/items';
+import "tailwindcss/tailwind.css";
 
 function App() {
   return (

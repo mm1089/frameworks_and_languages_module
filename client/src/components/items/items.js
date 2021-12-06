@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Component } from "react";
+import "tailwindcss/tailwind.css";
 
 function Items() {
   return (
