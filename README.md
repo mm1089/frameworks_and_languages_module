@@ -19,20 +19,22 @@
   <h5>January, 2022</h5>
 
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>View Code »</strong></a>
+</div>
 
 <!-- ABOUT THE PROJECT -->
 ## About
 
-  <p align="center"> The aim of this assignment is to produce a working server and client implementation to a provided specification. (I have chosen the frameworks React and Express)</p>
+  <p align="center"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
+  <p>(I have chosen the frameworks React and Express)</p>
   <p align="center"> The business requirements are captured in the provided automated test suites for both server and client.</p>
   <p align="center"> The server requirements are also detailed in an OpenAPI3 specification.</p>
     <br />
 
-</div>
+
 
 ## Requirements
 
-<h5>• You are to replace the example server and client implementations with new implementations that pass the server and client automated test suites<h5>
+<h5>• You must replace the example implementations with new ones that pass the automated tests<h5>
 <h5>• Your solutions must run in containers on CI</h5>
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
 <br />
@@ -94,29 +96,6 @@ To get a local copy up and running follow these simple example steps.
   <p align="right">(<a href="#top">▲</a>)</p>
 
 
-<!-- ROADMAP -->
-
-## Roadmap
-
-- Server Implementation
-- [ ] Pass all tests
-- [ ] Communicate with Client
-- [x] Install Express
-- [x] GET, PUT, POST, DELETE
-
-
-
-- Client Implementation
-- [ ] Complete Implementation
-- [ ] Pass all tests
-- [x] Create README.md
-- [x] Create React UI
-- [x] Style with Tailwind CSS
-
-
-See the [open issues](https://github.com/mm1089/airbnb/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">▲</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
@@ -145,6 +124,26 @@ NEXT_ID = max(ITEMS.keys()) + 1
 ```
 
 <p align="right">(<a href="#top">▲</a>)</p>
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- Server Implementation
+- [ ] Pass all tests
+- [ ] Communicate with Client
+- [x] Install Express
+- [x] GET, PUT, POST, DELETE
+
+
+
+- Client Implementation
+- [ ] Complete Implementation
+- [ ] Pass all tests
+- [x] Create README.md
+- [x] Create React UI
+- [x] Style with Tailwind CSS
+
 
 <!-- LICENSE -->
 
