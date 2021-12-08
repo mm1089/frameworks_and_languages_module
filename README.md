@@ -1,24 +1,3 @@
-# Frameworks and Languages Module
-
-TODO:
-* openapi spec for service
-* stub server and frontend containers serving empty pages and null endpoints
-* api tests (pytest? container)
-* frontend tests (cypress container)
-	* define class's id's of components
-
-
-* https://oai.github.io/Documentation/start-here.html
-* https://openapi.tools/
-* https://swagger.io/specification/
-* https://redocly.github.io/redoc/
-
-
-Consider OpenAPI testing with
-https://schemathesis.readthedocs.io/en/stable/python.html
-
-
-
 <div id="top"></div>
 
 <!-- Allan's module -->
@@ -27,7 +6,7 @@ https://schemathesis.readthedocs.io/en/stable/python.html
   <a href="https://github.com/mm1089/frameworks_and_languages_module">
   </a>
 
-<h2 align="center">Frameworks and Languages</h3>
+<h2 align="center">Frameworks and Languages Module</h3>
   <h3 align="center">(U14465) S21U14465</h2>
   <h4 align="center">Michael (mm1089)</h4>
 
@@ -40,32 +19,6 @@ https://schemathesis.readthedocs.io/en/stable/python.html
     <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>View Code »</strong></a>
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#install">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-
-
-  </ol>
-</details>
-
 
 <!-- ABOUT THE PROJECT -->
 ## About
@@ -92,6 +45,24 @@ https://schemathesis.readthedocs.io/en/stable/python.html
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+
+TODO:
+* openapi spec for service
+* stub server and frontend containers serving empty pages and null endpoints
+* api tests (pytest? container)
+* frontend tests (cypress container)
+	* define class's id's of components
+
+
+* https://oai.github.io/Documentation/start-here.html
+* https://openapi.tools/
+* https://swagger.io/specification/
+* https://redocly.github.io/redoc/
+
+
+Consider OpenAPI testing with
+https://schemathesis.readthedocs.io/en/stable/python.html
 
 This is an example of how you deploy my project locally.
 To get a local copy up and running follow these simple example steps.
