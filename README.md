@@ -32,7 +32,10 @@
 
 
 
+#<div align="left">
 ## Requirements
+</div>
+
 <div align="center">
 
 <h5>• You must replace the example implementations with new ones that pass the automated tests<h5>
@@ -40,15 +43,19 @@
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
 <br />
 
-* The [REPO](https://github.com/calaldees/frameworks_and_languages_module/) provides:
+<h5> The [Example-Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides: </h5>
 <h5>• An OpenAPI3 Specification for the server service </h5>
 <h5>• A reference server implementation that runs in a container (I have replaced this implementation) </h5>
 <h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
 <h5>• These tests run as GitHub actions as part of Continuous Integration (CI) </h5>
 <h5>• A reference client implementation (that uses the OpenAPI3 service server container) </h5>
 <h5>• A set of browser tests (cypress), to document the expected client/user flows </h5>
+</div>
 
+<div align="left">
 ### Built With
+
+
 
 * [React.js](https://reactjs.org/)
 * [Tailwind CSS](https://tailwindcss.com/)
@@ -84,32 +91,26 @@ To get a local copy up and running follow these simple example steps.
 <!-- INSTALL -->
 ### Install
 
-* This is an example of how to start the development build.
+<h5>This is an example of how to start the development build.</h5>
+
  ```sh
   make client
   ```
 
    ```sh
   make server
-  ``` 
+  ```
 
-  * Browser
-	* Allow popups for `https://gitpod.io`
+   ```sh
+  Allow popups for `https://gitpod.io`
+    ```
 
   <p align="right">(<a href="#top">▲</a>)</p>
-
-
-
-
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
 Use this space to show useful examples
-Additional screenshots
-code examples and demos
-Screenshots of finished implementation
-
 
 ```javascript
 const items = {
@@ -130,29 +131,22 @@ NEXT_ID = max(ITEMS.keys()) + 1
 
 <!-- ROADMAP -->
 
-## Roadmap
+## Server Roadmap
 
-- Server Implementation
 - [ ] Pass all tests
 - [ ] Communicate with Client
+- [ ] Data Persistence
 - [x] Install Express
 - [x] GET, PUT, POST, DELETE
 
+## Client Roadmap
 
-
-- Client Implementation
 - [ ] Complete Implementation
 - [ ] Pass all tests
 - [x] Create README.md
 - [x] Create React UI
 - [x] Style with Tailwind CSS
 
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
