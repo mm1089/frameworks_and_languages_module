@@ -16,6 +16,7 @@
   <h5>January, 2022</h5>
 
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>» View Code »</strong></a>
+  <br />
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module/commits/main"><strong>➥ [View Commit History] </strong></a>
 </div>
 
@@ -26,8 +27,6 @@
   <p align="center">(I have chosen the frameworks React and Express)</p>
   <p align="center"> The business requirements are captured in the provided automated test suites for both server and client.</p>
   <p align="center"> The server requirements are also detailed in an OpenAPI3 specification.</p>
-    <br />
-
 
 
 <div align="left">
@@ -51,18 +50,6 @@ The [Example Repo](https://github.com/calaldees/frameworks_and_languages_module/
 <h5>• A set of browser tests (cypress), to document the expected client/user flows </h5>
 </div>
 
-<div align="left">
-
-### Built With
-
-* [React.js](https://reactjs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Express.JS](https://expressjs.com/)
-* [GitPod IDE](https://gitpod.io)
-</div>
-
-<p align="right">(<a href="#top">▲</a>)</p>
-<p align="right">(<a href="#bottom">▼</a>)</p>
 
 
 <!-- GETTING STARTED -->
@@ -148,6 +135,19 @@ NEXT_ID = max(ITEMS.keys()) + 1
 - [x] Create React UI
 - [x] Style with Tailwind CSS
 
+
+<div align="left">
+
+### Built With
+
+* [React.js](https://reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Express.JS](https://expressjs.com/)
+* [GitPod IDE](https://gitpod.io)
+</div>
+
+<p align="right">(<a href="#top">▲</a>)</p>
+<p align="right">(<a href="#bottom">▼</a>)</p>
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
