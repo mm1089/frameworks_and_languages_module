@@ -15,7 +15,8 @@
   <h5 align="center">Module Leaders: Allan Callaghan, Gordon Aiken</h5>
   <h5>January, 2022</h5>
 
-  <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>View Code »</strong></a>
+  <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>» View Code »</strong></a>
+  <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module/commits/main"><strong>➥ [View Commit History] </strong></a>
 </div>
 
 <!-- ABOUT THE PROJECT -->
