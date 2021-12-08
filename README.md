@@ -32,8 +32,10 @@
 
 
 
-#<div align="left">
-## Requirements
+<div align="left">
+
+### Requirements
+
 </div>
 
 <div align="center">
@@ -43,7 +45,7 @@
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
 <br />
 
-<h5> The [Example-Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides: </h5>
+The [Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides:
 <h5>• An OpenAPI3 Specification for the server service </h5>
 <h5>• A reference server implementation that runs in a container (I have replaced this implementation) </h5>
 <h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
@@ -53,6 +55,7 @@
 </div>
 
 <div align="left">
+
 ### Built With
 
 
@@ -113,6 +116,8 @@ To get a local copy up and running follow these simple example steps.
 Use this space to show useful examples
 
 ```javascript
+Items.js Hardcoded item
+
 const items = {
   1: {
       "id": 1,
