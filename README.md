@@ -7,14 +7,11 @@
   </a>
 
 <h2 align="center">Frameworks and Languages Module</h2>
-<br />
   <h4 align="center">Michael J. McLain</h4>
   <h4 align="center">Software Engineering</h4>
   <h4 align="center">S21U14465</h4>
-  <br />
   <h4 align="center">Canterbury Christ Church University</h4>
   <h4 align="center">Canterbury, CT1 1PL, UK.</h4>
-  <br />
   <h5 align="center">Module Leaders: Allan Callaghan, Gordon Aiken</h5>
   <h5>January, 2022</h5>
 
@@ -34,7 +31,7 @@
 
 <div align="left">
 
-### Requirements
+## Requirements
 
 </div>
 
@@ -43,9 +40,8 @@
 <h5>• You must replace the example implementations with new ones that pass the automated tests<h5>
 <h5>• Your solutions must run in containers on CI</h5>
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
-<br />
 
-The [Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides:
+The [Example Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides:
 <h5>• An OpenAPI3 Specification for the server service </h5>
 <h5>• A reference server implementation that runs in a container (I have replaced this implementation) </h5>
 <h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
@@ -57,8 +53,6 @@ The [Repo](https://github.com/calaldees/frameworks_and_languages_module/) provid
 <div align="left">
 
 ### Built With
-
-
 
 * [React.js](https://reactjs.org/)
 * [Tailwind CSS](https://tailwindcss.com/)
