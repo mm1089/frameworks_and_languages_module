@@ -25,7 +25,7 @@
 ## About
 
   <p align="center"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
-  <p>(I have chosen the frameworks React and Express)</p>
+  <p align="center">(I have chosen the frameworks React and Express)</p>
   <p align="center"> The business requirements are captured in the provided automated test suites for both server and client.</p>
   <p align="center"> The server requirements are also detailed in an OpenAPI3 specification.</p>
     <br />
@@ -33,12 +33,14 @@
 
 
 ## Requirements
+<div align="center">
 
 <h5>• You must replace the example implementations with new ones that pass the automated tests<h5>
 <h5>• Your solutions must run in containers on CI</h5>
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
 <br />
-<h5>[The repository](https://github.com/calaldees/frameworks_and_languages_module) provides:</h5>
+
+* The [REPO](https://github.com/calaldees/frameworks_and_languages_module/) provides:
 <h5>• An OpenAPI3 Specification for the server service </h5>
 <h5>• A reference server implementation that runs in a container (I have replaced this implementation) </h5>
 <h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
@@ -52,6 +54,7 @@
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Express.JS](https://expressjs.com/)
 * [GitPod IDE](https://gitpod.io)
+</div>
 
 <p align="right">(<a href="#top">▲</a>)</p>
 <p align="right">(<a href="#bottom">▼</a>)</p>
