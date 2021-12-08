@@ -7,8 +7,16 @@
   </a>
 
 <h2 align="center">Frameworks and Languages Module</h3>
-  <h3 align="center">(U14465) S21U14465</h2>
-  <h4 align="center">Michael (mm1089)</h4>
+<br />
+  <h2 align="center">Michael J. McLain</h2>
+  <h3 align="center">Software Engineering</h3>
+  <h4 align="center">S21U14465</h4>
+  <br />
+  <h3 align="center">Canterbury Christ Church University</h3>
+  <h3 align="center">Canterbury, CT1 1PL, UK.</h3>
+  <br />
+  <h5 align="center">Module Leaders: Allan Callaghan, Gordon Aiken</h5>
+  <h5>January, 2022</h5>
 
   <p align="center">
     The goal is to create a server and client implementation to a provided specification and ensure it meets the required tests.
@@ -22,6 +30,23 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About
+
+The aim of this assignment is to produce a working server and client implementation to a provided specification. (I have chosen the frameworks React and Express)
+The business requirements are captured in the provided automated test suites for both server and client.
+The server requirements are also detailed in an OpenAPI3 specification.
+
+• You are to replace the example server and client implementations with new implementations that pass the server and client automated test suites
+• Your solutions must run in containers on CI
+• Your solutions must use the frameworks you researched and justified in assignment 1
+
+[The repository](https://github.com/calaldees/frameworks_and_languages_module) provides:
+• An OpenAPI3 Specification for the server service
+• A reference server implementation that runs in a container (I have replaced this implementation)
+• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec.
+• These tests run as GitHub actions as part of Continuous Integration (CI)
+• A reference client implementation (that uses the OpenAPI3 service server container)
+• A set of browser tests (cypress), to document the expected client/user flows
+
 
 ### Built With
 
@@ -66,6 +91,7 @@ https://schemathesis.readthedocs.io/en/stable/python.html
 
 This is an example of how you deploy my project locally.
 To get a local copy up and running follow these simple example steps.
+
 1. `Clone my repository`
 2. `Ensure port 3000/3001 are clear`
 3. `make client` for client 
@@ -93,7 +119,6 @@ To get a local copy up and running follow these simple example steps.
   make server
   ``` 
   
-
   * Browser
 	* Allow popups for `https://gitpod.io`
 
