@@ -103,7 +103,7 @@ To get a local copy up and running follow these simple example steps.
 
    ```sh
   Allow popups for `https://gitpod.io`
-    ```
+  ```
 
   <p align="right">(<a href="#top">▲</a>)</p>
 <!-- USAGE EXAMPLES -->
@@ -133,6 +133,7 @@ NEXT_ID = max(ITEMS.keys()) + 1
 
 ## Server Roadmap
 
+- [ ] Complete Implementation 
 - [ ] Pass all tests
 - [ ] Communicate with Client
 - [ ] Data Persistence
