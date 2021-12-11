@@ -9,4 +9,8 @@ const items = {
       "date_from": "2021-11-22T08:22:39.067408",
   }
 }
-NEXT_ID = max(ITEMS.keys()) + 1
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+module.exports = items
