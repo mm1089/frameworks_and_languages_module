@@ -12,7 +12,7 @@
   <h4 align="center">S21U14465</h4>
   <h4 align="center">Canterbury Christ Church University</h4>
   <h4 align="center">Canterbury, CT1 1PL, UK.</h4>
-  <h5 align="center">Module Leaders: Allan Callaghan, Gordon Aiken</h5>
+  <h5 align="center">Module Leaders: Allan Callaghan @caladees , Gordon Aiken</h5>
   <h5>January, 2022</h5>
 
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>» View Code »</strong></a>
@@ -113,6 +113,7 @@ const items = {
 }
 NEXT_ID = max(ITEMS.keys()) + 1
 ```
+![image](https://user-images.githubusercontent.com/72493335/145279617-1fc89085-61e1-4d0e-8ae1-5be04e147bed.png)
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
