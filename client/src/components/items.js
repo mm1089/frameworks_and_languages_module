@@ -4,14 +4,14 @@ function Items() {
   return (
     <div className="Items">
       <section className="p-1">
-        <div className="shadow rounded-md bg-gray-200">
+        <div className="shadow rounded-md bg-red-200">
         <h2 className="pl-4 text-xl font-semibold px-2 py-1">New Item</h2>
           <div className="pl-4 rounded-full b-2 p-2 bg-green-100 w-52 mb-2 p-2">
             <p className="text-gray-800 items-end text-xs font-semibold">[React Sub-Component "Items"]</p>
           </div>
         </div>
       </section>
-      <section className="p-3 items-center">
+      <section className="bg-red-200 p-3 items-center">
         <form>
           <label >Username: <input placeholder="username" className="border focus:outline-none hover:shadow-md cursor-pointer p-1 rounded bg-gray-100 shadow" type="text" name="username" /></label>
           <label className="p-1">Latitude: <input placeholder="latitude" className="border focus:outline-none hover:shadow-md cursor-pointer p-1 rounded bg-gray-100 shadow" type="text" name="latitude" /></label>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Items from './components/items/items';
-import "tailwindcss/tailwind.css";
+import Items from './components/items';
+import Input from './components/input';
+//import { Input } from './components/input';
 
 function App() {
   return (
@@ -16,9 +17,15 @@ function App() {
       </section>
 {/* Items Component */}
 
-      <Items />
+      {/* <Items /> */}
+
+      <div className=''>
+        <Input />
+      </div>
+      
 
     </div>
+    
   );
 }
 
