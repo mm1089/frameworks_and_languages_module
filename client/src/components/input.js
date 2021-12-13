@@ -17,11 +17,13 @@ function Input() {
         alert(input)
     }
     return(
-        <section className="text-gray-600 body-font relative ">
+        <section className="rounded border ml-12 mr-12 mb-8 bg-gray-200 text-gray-600 body-font relative ">
             <div className="container px-5 py-24 mx-auto">
-                <div className="flex flex-col text-center w-full mb-12">
-                <p className="pl-4 pr-4 pt-2 text-2xl text-red-500">&#128205;</p>
-                <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900">FreeCycle</h1>
+                <div className="flex flex-col text-center w-full mb-4">
+                    <div className="lg:w-1/2 md:w-2/3 mx-auto rounded-xl border bg-gray-50 p-4 relative w-64 text-center">
+                        <p className="pl-4 pr-4 text-2xl text-red-500">&#128205;</p>
+                        <h1 className="sm:text-4xl text-2xl font-medium title-font text-gray-900">FreeCycle</h1>
+                    </div>
                 </div>
 
             <form onSubmit={SubmitItem}>
