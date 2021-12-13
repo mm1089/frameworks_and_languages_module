@@ -64,15 +64,13 @@ To get a local copy up and running follow these simple example steps.
 5. `cd server/`
 6. `make server` for server
 7. `cd ..`
-8. ```sh
-  make client
-  ```
-9. ```sh
-  make server
-  ```
+8.  `make client`
+9.  `make server`
 10. Run PyTests
+11. <a href="#tests">PyTests</a>
 
 ## How to Test Server and Client vs. Specification
+<div id="tests"></div>
 
 This is an example of how you run the tests against the specification
 To run the tests follow these simple example steps.
