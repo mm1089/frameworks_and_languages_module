@@ -82,6 +82,14 @@ app.get('/v2/items/:item_id', (req, res) => {
 // Error 404 - object not found
 // Error 400 - bad request
 
+/* How to run TESTS
+1  cd server_test/
+3  pytest test_api.py 
+4  pip install pytest
+5  pytest test_api.py 
+6  pytest test_api.py --pdb
+*/
+
 app.post('/v2/item/', (req, res) => {
     const items = req.body.item;
     if (!req.body.user_id || req.body.name.length < 1){

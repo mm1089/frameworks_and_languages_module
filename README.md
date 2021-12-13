@@ -37,98 +37,88 @@
 
 <div align="center">
 
-<h5>• You must replace the example implementations with new ones that pass the automated tests<h5>
-<h5>• Your solutions must run in containers on CI</h5>
+<h5>• You must replace the example implementations with new ones that pass the **automated tests**<h5>
+<h5>• Your solutions **must run in containers on CI**</h5>
 <h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
 
 The [Example Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides:
-<h5>• An OpenAPI3 Specification for the server service </h5>
-<h5>• A reference server implementation that runs in a container (I have replaced this implementation) </h5>
+<h5>• An OpenAPI3 Specification for server </h5>
+<h5>• A reference server implementation that runs in a container</h5>
 <h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
-<h5>• These tests run as GitHub actions as part of Continuous Integration (CI) </h5>
+<h5>• The Tests run as GitHub actions as part of Continuous Integration (CI) </h5>
 <h5>• A reference client implementation (that uses the OpenAPI3 service server container) </h5>
 <h5>• A set of browser tests (cypress), to document the expected client/user flows </h5>
 </div>
 
 
+## How to run Server and Client Implementation
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you deploy my project locally.
+This is an example of how you deploy my project.
 To get a local copy up and running follow these simple example steps.
 
-1. `Clone my repository`
-2. bla bla bla
-3. `make client` for client 
-4. `make server` for server
+0. Allow popups for `https://gitpod.io`
+1. [Clone the repository](https://github.com/mm1089/frameworks_and_languages_module)
+2. `cd client/`
+3. `make client` for client
+4. `cd ..`
+5. `cd server/`
+6. `make server` for server
+7. `cd ..`
+8. ```sh
+  make client
+  ```
+9. ```sh
+  make server
+  ```
+10. Run PyTests
+
+## How to Test Server and Client vs. Specification
+
+This is an example of how you run the tests against the specification
+To run the tests follow these simple example steps.
+
+1.  `cd server_test/`
+2.  `pytest test_api.py`
+3.  `pip install pytest` {Only needed once}
+4.  `pytest test_api.py`
+5.  `pytest test_api.py --pdb`
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
-### Clone the repo
+## Examples
 
-   ```sh
-   
-   git clone https://github.com/mm1089/frameworks_and_languages_module
-   
-   ```
-
-<!-- INSTALL -->
-### Install
-
-<h5>This is an example of how to start the development build.</h5>
-
- ```sh
-  make client
-  ```
-
-   ```sh
-  make server
-  ```
-
-   ```sh
-  Allow popups for `https://gitpod.io`
-  ```
-
-  <p align="right">(<a href="#top">▲</a>)</p>
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples
-
+1. Example of storing Items
 ```javascript
-Items.js Hardcoded item
-
 const items = {
   1: {
       "id": 1,
       "user_id": "mm1089",
       "keywords": ["car", "bus", "train"],
-      "description": "what a cool assignment",
+      "description": "cool assignment",
       "lat": 1,
       "lon": 1,
       "date_from": "2021-11-22T08:22:39.067408",
   }
 }
-NEXT_ID = max(ITEMS.keys()) + 1
 ```
+2. Example of CORS
+3. Example of Server Implementation
+4. Example of Client Implementation
+
 ![image](https://user-images.githubusercontent.com/72493335/145279617-1fc89085-61e1-4d0e-8ae1-5be04e147bed.png)
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
-<!-- ROADMAP -->
-
-## Server Roadmap
+# Server Features/Roadmap
 
 - [ ] Complete Implementation 
 - [ ] Pass all tests
 - [ ] Communicate with Client
-- [ ] Data Persistence
+- [ ] CORS
 - [x] Install Express
 - [x] GET, PUT, POST, DELETE
 
-## Client Roadmap
+# Client Features/Roadmap
 
 - [ ] Complete Implementation
 - [ ] Pass all tests
@@ -139,16 +129,13 @@ NEXT_ID = max(ITEMS.keys()) + 1
 
 <div align="left">
 
-### Built With
+## Built Using
 
 * [React.js](https://reactjs.org/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Express.JS](https://expressjs.com/)
 * [GitPod IDE](https://gitpod.io)
 </div>
-
-<p align="right">(<a href="#top">▲</a>)</p>
-<p align="right">(<a href="#bottom">▼</a>)</p>
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
