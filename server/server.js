@@ -7,6 +7,12 @@ const PORT = 8000;
 const app = express();
 app.use(express.json());
 
+process.on('SIGINT', function() {
+    process.exit();
+});
+
+//Ensure server closes
+
 // serve on 0.0.0.0
 //load express module
 //express function / app object for methods like GET POST PUT DELETE
