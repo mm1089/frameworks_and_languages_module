@@ -22,6 +22,17 @@ process.on('SIGINT', function() {
 //route - specify thr path or url with '/'
 //callback function which is referred to as a route handler
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+
+//CORS - Expand on this
+
 const items = {
     id: 0,
     user_id: "michael",
@@ -79,6 +90,8 @@ app.get('/v2/items/:item_id', (req, res) => {
     const item_id = items.find(i => i.item_id === parseInt(req.params.item_id))
     if (!item_id) res.status(404).send('Error: 404 - The item with the given ID was not found.');
 
+/// iSsue with item var name
+
 
     res.send(item_id);
     res.send({items});
@@ -94,6 +107,9 @@ app.get('/v2/items/:item_id', (req, res) => {
 4  pip install pytest
 5  pytest test_api.py 
 6  pytest test_api.py --pdb
+
+https://github.com/calaldees/teachingWorkshops/blob/master/schoolOfETD/programming_frameworks_and_languages/web-service.md
+CURL TEST
 */
 
 app.post('/v2/item/', (req, res) => {
