@@ -78,13 +78,13 @@ app.use('/item/:item_id', (req, res, next) => {
     next()
   })
 
-app.get('/v2/item/', (req, res) => {
+app.get('/item/', (req, res) => {
     res.status(200);
     console.log(res.json);
     return res.json(items);
 });
 
-app.get('/v2/items/:item_id', (req, res) => {
+app.get('/items/:item_id', (req, res) => {
     {
     let items = items;
     const item_id = items.find(i => i.item_id === parseInt(req.params.item_id))
@@ -112,7 +112,7 @@ https://github.com/calaldees/teachingWorkshops/blob/master/schoolOfETD/programmi
 CURL TEST
 */
 
-app.post('/v2/item/', (req, res) => {
+app.post('/item/', (req, res) => {
     const items = req.body.item;
     if (!req.body.user_id || req.body.name.length < 1){
       res.status(405).send('Error: 400 - Invalid Input, user ID entered does not meet the validation rules. Cannot be less than 1 char!')
@@ -127,7 +127,7 @@ app.post('/v2/item/', (req, res) => {
 
 // In future the ID will be assigned by a database, I have to create here
 
-app.put('/v2/items/:item_id', (req, res) => {
+app.put('/items/:item_id', (req, res) => {
     //if item doesn't exist then throw a 404
     let item_id = req.params.item_id;
     let user_id = req.body.user_id;
@@ -159,7 +159,7 @@ app.put('/v2/items/:item_id', (req, res) => {
 })
 
 
-app.delete('/v2/delete/:item_id', (res, req)=> {
+app.delete('/delete/:item_id', (res, req)=> {
     let id = req.params.id;
     let index = items.findIndex((createItem)=> {
         return createItem.id === Number.parseInt(id)
