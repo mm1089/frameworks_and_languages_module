@@ -1,13 +1,18 @@
-//Attempting Routes
 var express = require('express')
-var cors = require('cors');
-var app = express()
+var cors = require('cors')
 
+var router = express.Router()
+//Express Router
 //require the express package
 //require the cors package
-//Resource Used: https://www.npmjs.com/package/cors
-//https://www.youtube.com/watch?v=h-WtIT6gCBk
+//Resource Used: https://www.npmjs.com/package/cors -- CORS SETUP
+//https://www.youtube.com/watch?v=h-WtIT6gCBk -- CORS 
 //https://node-cors-client.netlify.app/ Working Example of CORS w/ React Express
+//
+//https://expressjs.com/en/api.html#express.router -- ROUTER
+//Router object is an isolated instance of middleware and routes
+
+
 var corsOptions = {
   origin: '*',
   methods:'GET, POST, DELETE, OPTIONS',
@@ -15,12 +20,7 @@ var corsOptions = {
   optionsSuccessStatus: 204
 }
 
-//The HTTP 200 OK success status response code indicates that the request has succeeded.
 
-app.get('/products/:id', cors(corsOptions), function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for only example.com.'})
-})
- 
-app.listen(8000, function () {
-  console.log('CORS-enabled web server listening on port 80')
-})
+router.options('/', cors (corsOptions))
+
+module.exports = router;
