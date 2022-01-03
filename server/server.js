@@ -19,7 +19,7 @@ process.on('SIGINT', function() {
 //Paths
 
 var router_home = require('./routes/home')
-var router_item = require ('./routes/')
+var router_item = require ('./routes/item')
 var router_items = require ('./routes/')
 
 

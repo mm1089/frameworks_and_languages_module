@@ -8,9 +8,19 @@ var item = require ('../items')
 //Resources Used: 
 //https://www.npmjs.com/package/cors
 //https://www.youtube.com/watch?v=PNtFSVU-YTI
-//origin * is totally safe unless that resource contains private data.
 //Cross-Origin Resource Sharing (CORS) Default Setup
 
 var corsDefault = {
     origin: '*',
+    methods:'GET, POST, OPTIONS',
+    allowedHeaders: 'Content-Type'
+}
+//origin: Configures Access-Control-Allow-Origin CORS header
+//origin * is totally safe unless that resource contains private data.
+//methods: Configures Access-Control-Allow-Methods CORS header eg: GET,PUT,POST
+//allowedHeaders: Configures Access-Control-Allow-Headers CORS header. eg: Content-Type,Authorization
+
+var corsDefaultItem = {
+    origin: '*',
+    methods: 'GET, DELETE, OPTIONS'
 }
