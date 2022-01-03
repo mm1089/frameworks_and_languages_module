@@ -31,6 +31,10 @@ var corsDefaultItem = {
 
 router.get('/:itemId', cors(corsDefaultItem), function(req, res){
     res.send(item)
+    if (item.length === 0) { 
+    console.log("There is no Item. The array is empty!") 
+    res.status(204).send('Error: 204 - The item with the given ID was not found.');
+    }
 })
 
 //Tested 03.01.22 Working as expected.
