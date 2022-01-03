@@ -92,14 +92,20 @@ const items = {
       "id": 1,
       "user_id": "mm1089",
       "keywords": ["car", "bus", "train"],
-      "description": "cool assignment",
-      "lat": 1,
-      "lon": 1,
-      "date_from": "2021-11-22T08:22:39.067408",
+      "description": "assignment",
+      "latitude": 1,
+      "longitude": 1,
   }
 }
 ```
 2. Example of CORS
+```javascript
+var corsDefault = {
+    origin: '*',
+    methods:'GET, POST, OPTIONS',
+    allowedHeaders: 'Content-Type'
+}
+```
 3. Example of Server Implementation
 4. Example of Client Implementation
 
