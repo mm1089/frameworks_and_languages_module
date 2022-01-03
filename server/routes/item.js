@@ -28,11 +28,16 @@ var corsDefaultItem = {
 }
 
 //GET an item
-//This is a similar way to how I did it before on server.js which will have its contents moved here
+
+router.get('/:itemId', cors(corsDefaultItem), function(req, res){
+})
+//This is a similar way to how I did it before on server.js which will have its contents spliced and moved here
 
 //POST an item
-
+router.post('/', cors(corsDefaultItem), function(req, res){
+})
 //DEL an item
-
+router.delete('/:itemId', cors(corsDefaultItem), function(req,res){
+})
 
 module.exports = router

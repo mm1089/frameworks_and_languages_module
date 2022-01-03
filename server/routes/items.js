@@ -10,6 +10,7 @@ var router = express.Router()
 //https://www.npmjs.com/package/cors
 //https://www.youtube.com/watch?v=PNtFSVU-YTI
 //Cross-Origin Resource Sharing (CORS) Default Setup
+//CORS package is used for solving the CORS policy issue in express.js
 
 var corsDefault = {
     origin: '*',
@@ -17,9 +18,10 @@ var corsDefault = {
     allowedHeaders: 'Content-Type'
 }
 
+//GET req
 
-
-//get
+router.get('/', cors(corsSetupGeneral), function(req, res){
+})
 
 
 module.exports = router
