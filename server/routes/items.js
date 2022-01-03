@@ -21,7 +21,7 @@ var corsDefault = {
 //GET req
 
 router.get('/', cors(corsDefault), function(req, res){
-    
+    res.send("You just called the post method");
 })
 
 

@@ -1,4 +1,12 @@
 var items = {
+  0: {
+    "id": 0,
+    "user_id": "Zero",
+    "keywords": ["nil", "zilch", "none"],
+    "description": "Amazing",
+    "lat": 0,
+    "lon": 0,
+},
   1: {
       "id": 1,
       "user_id": "Michael",
