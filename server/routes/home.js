@@ -10,8 +10,11 @@ var router = express.Router()
 //https://node-cors-client.netlify.app/ Working Example of CORS w/ React Express
 //
 //https://expressjs.com/en/api.html#express.router -- ROUTER
-//Router object is an isolated instance of middleware and routes
+//https://expressjs.com/en/api.html#router.route //ROUTING ROUTER.
 
+router.get('/', function(req, res, next) {
+  res.send("Home Page for Allan's Assignment")
+})
 
 var corsOptions = {
   origin: '*',

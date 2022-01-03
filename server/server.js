@@ -3,7 +3,7 @@
 //const express = require('express');
 //const items = require('./items.js');
 //const bodyParser = require('body-parser');
-//const PORT = 8000;
+const PORT = 8000;
 //const app = express();
 //app.use(express.json());
 //Ensure server closes
@@ -48,7 +48,7 @@ server.use('/', router_items)
 //route - specify thr path or url with '/'
 //callback function which is referred to as a route handler
 
-
+/*
     app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());
     app.use(express.json());
@@ -106,7 +106,7 @@ app.get('/items/:item_id', (req, res) => {
 
 https://github.com/calaldees/teachingWorkshops/blob/master/schoolOfETD/programming_frameworks_and_languages/web-service.md
 CURL TEST
-*/
+
 
 app.post('/item/', (req, res) => {
     const items = req.body.item;
@@ -169,12 +169,12 @@ app.delete('/delete/:item_id', (res, req)=> {
     }
 })
 
-
+*/
 //port handling
 //if set use this, if not use 3000, store result in const
 //assign a port of 3000 permanently
 
-app.listen(
+server.listen(
     PORT, () => console.log(`Open on PORT: ${PORT}`)
 );
 
