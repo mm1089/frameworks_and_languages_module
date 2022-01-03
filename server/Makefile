@@ -1,18 +1,7 @@
-DOCKER_IMAGE:=client
-
-run_local: node_modules
-	node server.js
-node_modules:
-	npm install
+DOCKER_IMAGE:=express_server
 
 build:
 	docker build --tag ${DOCKER_IMAGE} .
+
 run:
 	docker run --rm -it --publish 8000:8000 ${DOCKER_IMAGE}
-run_shell:
-	docker run --rm -it --publish 8000:8000 --entrypoint /bin/sh ${DOCKER_IMAGE}
-
-clean:
-	rm -rf \
-		node_modules \
-		package-lock.json
