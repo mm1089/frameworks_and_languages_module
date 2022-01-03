@@ -7,14 +7,22 @@ const PORT = 8000;
 const app = express();
 app.use(express.json());
 
+
+var express = require('express')
+
+
+//Ensure server closes
 process.on('SIGINT', function() {
     process.exit();
 });
 
+//Paths
 
-var express = require('express')
+var router_home = require('./routes/home')
+var router_item = require ('./routes/')
+var router_items = require ('./routes/')
 
-//Ensure server closes
+
 
 // serve on 0.0.0.0
 //load express module
