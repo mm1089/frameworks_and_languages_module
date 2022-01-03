@@ -28,24 +28,15 @@ var corsDefaultItem = {
 }
 
 //GET an item
-
-router.get('/:itemId', cors(corsDefaultItem), function(req, res){
-    res.send(item)
-    if (item.length === 0) { 
-    console.log("There is no Item. The array is empty!") 
-    res.status(204).send('Error: 204 - The item with the given ID was not found.');
-    }
-})
-
 //Tested 03.01.22 Working as expected.
 //https://prnt.sc/25uobh2
 //This is a similar way to how I did it before on server.js which will have its contents spliced and moved here
+router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
+    console.log(req.params.itemId)
+    res.json(item);
+})
 
-//POST an item
-router.post('/', cors(corsDefaultItem), function(req, res){
-})
-//DEL an item
-router.delete('/:itemId', cors(corsDefaultItem), function(req,res){
-})
+
+
 
 module.exports = router

@@ -8,15 +8,7 @@ var items = {
       "lon": 1,
       "date_from": "2021-11-22T08:22:39.067408",
   },
-  2: {
-    "id": 2,
-    "user_id": "McLain",
-    "keywords": ["3070ti", "3800x", "AX1200i"],
-    "description": "Amazing pc",
-    "lat": 2,
-    "lon": 2,
-    "date_from": "2020-01-22T08:22:39.028283",
-}
+
 }
 
 
