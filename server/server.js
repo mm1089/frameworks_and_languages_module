@@ -1,26 +1,34 @@
-const { response } = require('express');
-const { request } = require('express');
-const express = require('express');
+//const { response } = require('express');
+//const { request } = require('express');
+//const express = require('express');
 //const items = require('./items.js');
-const bodyParser = require('body-parser');
-const PORT = 8000;
-const app = express();
-app.use(express.json());
-
-
-var express = require('express')
-
-
+//const bodyParser = require('body-parser');
+//const PORT = 8000;
+//const app = express();
+//app.use(express.json());
 //Ensure server closes
 process.on('SIGINT', function() {
     process.exit();
 });
 
-//Paths
+var express = require('express')
 
 var router_home = require('./routes/home')
 var router_item = require ('./routes/item')
-var router_items = require ('./routes/')
+var router_items = require ('./routes/items')
+
+var server = express()
+server.use(express.json())
+server.use(express.urlencoded) //extended false? or true
+
+server.use('/', router_home)
+
+//Resources Used: https://expressjs.com/en/api.html
+//express.urlencoded() is required when submitting a form with post method
+//as it recognizes the incoming Request Object as a string or array
+//If extended is false, you can not post a "nested object"
+
+
 
 
 
@@ -33,36 +41,6 @@ var router_items = require ('./routes/')
 //route - specify thr path or url with '/'
 //callback function which is referred to as a route handler
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-  });
-
-//CORS - Expand on this
-
-const items = {
-    id: 0,
-    user_id: "michael",
-    keywords:[
-      "1",
-      "2",
-      "3"
-    ],
-    description: "set of 3 numbers",
-    image: "https://placekitten.com/300/300",
-    lat: 61.61,
-    lon: 0.0,
-    date_from: "2019-08-24T14:15:22Z",
-    date_to: "2019-08-24T14:15:22Z"
-    };
-
-//Used to store hardcoded item data here
-//Moved to ./items.js
-//added back temporarily.
 
     app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());

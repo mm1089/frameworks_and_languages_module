@@ -7,7 +7,7 @@ var app = express()
 //require the cors package
 //Resource Used: https://www.npmjs.com/package/cors
 
-var corsOptions = {
+var corsSettings = {
   origin: '*',
   methods:'GET, POST, DELETE, OPTIONS',
   AllowedHeaders: 'Content-Type',
