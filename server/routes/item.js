@@ -58,7 +58,24 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     //Object.keys vs Object.values vs Object.entries https://www.youtube.com/watch?v=3s0YFgxuOV0
     //Testing Multiple Item Objects: https://prnt.sc/25v8vua
     
+    router.post('/', cors(corsDefault), function(req, res){
+        console.log()
+        /*
+        id:
+        user_id: req.body.user_id
+        description: req.body.description
+        image: req.body.image
+        latitude: req.body.latitude
+        longitude: req.body.longitude
+        keywords: req.body.keywords
+        title: req.body.title
+        */
+    })
 
+    router.delete('/:itemId', cors(corsDefaultItem), function(req, res){
+        //
+        console.log()
+    })
 })
 
 

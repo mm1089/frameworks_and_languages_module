@@ -116,16 +116,18 @@ var corsDefault = {
 # Server Features/Roadmap
 
 - [ ] Complete Implementation 
-- [ ] Pass all tests
+- [ ] Pass tests
 - [ ] Communicate with Client
-- [ ] CORS
+- [x] CORS
 - [x] Install Express
-- [x] GET, PUT, POST, DELETE
+- [x] GET
+- [ ] POST
+- [ ] DELETE
 
 # Client Features/Roadmap
 
 - [ ] Complete Implementation
-- [ ] Pass all tests
+- [ ] Pass tests
 - [x] Create README.md
 - [x] Create React UI
 - [x] Style with Tailwind CSS
