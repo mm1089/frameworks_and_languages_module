@@ -27,6 +27,12 @@ var corsDefaultItem = {
     allowedHeaders: 'Content-Type'
 }
 
-//Get post del opt
+//GET an item
+//This is a similar way to how I did it before on server.js which will have its contents moved here
+
+//POST an item
+
+//DEL an item
+
 
 module.exports = router
