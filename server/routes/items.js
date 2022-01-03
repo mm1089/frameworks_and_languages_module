@@ -20,7 +20,7 @@ var corsDefault = {
 
 //GET req
 
-router.get('/', cors(corsSetupGeneral), function(req, res){
+router.get('/', cors(corsDefault), function(req, res){
 })
 
 
