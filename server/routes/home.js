@@ -6,8 +6,9 @@ var app = express()
 //require the express package
 //require the cors package
 //Resource Used: https://www.npmjs.com/package/cors
-
-var corsSettings = {
+//https://www.youtube.com/watch?v=h-WtIT6gCBk
+//https://node-cors-client.netlify.app/ Working Example of CORS w/ React Express
+var corsOptions = {
   origin: '*',
   methods:'GET, POST, DELETE, OPTIONS',
   AllowedHeaders: 'Content-Type',

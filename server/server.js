@@ -19,16 +19,23 @@ var router_items = require ('./routes/items')
 
 var server = express()
 server.use(express.json())
-server.use(express.urlencoded) //extended false? or true
+server.use(express.urlencoded({ extended: false}))
 
 server.use('/', router_home)
+server.use('/item', router_item)
+server.use('/', router_items)
 
 //Resources Used: https://expressjs.com/en/api.html
 //express.urlencoded() is required when submitting a form with post method
 //as it recognizes the incoming Request Object as a string or array
-//If extended is false, you can not post a "nested object"
+//If extended is false, you can not post a "nested object" based on body-parser. 
 
 
+//server.use(express.static('public', options))
+
+//Express.Static
+//This is a built-in middleware function in Express.
+//Resources Used: https://expressjs.com/en/api.html#express.static
 
 
 
