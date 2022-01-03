@@ -12,6 +12,9 @@ var router = express.Router()
 //https://expressjs.com/en/api.html#express.router -- ROUTER
 //https://expressjs.com/en/api.html#router.route //ROUTING ROUTER.
 
+//Working Test 03.01.22
+//https://prnt.sc/25uhxg2
+
 router.get('/', function(req, res, next) {
   res.send("Home Page for Allan's Assignment")
 })
