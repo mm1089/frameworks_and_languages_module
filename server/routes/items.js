@@ -21,6 +21,7 @@ var corsDefault = {
 //GET req
 
 router.get('/', cors(corsDefault), function(req, res){
+    
 })
 
 

@@ -30,7 +30,11 @@ var corsDefaultItem = {
 //GET an item
 
 router.get('/:itemId', cors(corsDefaultItem), function(req, res){
+    res.send(item)
 })
+
+//Tested 03.01.22 Working as expected.
+//https://prnt.sc/25uobh2
 //This is a similar way to how I did it before on server.js which will have its contents spliced and moved here
 
 //POST an item
