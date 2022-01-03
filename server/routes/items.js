@@ -1,6 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 var item = require ('../items')
+var router = express.Router()
 
 //require hardcoded items
 //require the express package
@@ -15,3 +16,10 @@ var corsDefault = {
     methods:'GET, POST, OPTIONS',
     allowedHeaders: 'Content-Type'
 }
+
+
+
+//get
+
+
+module.exports = router
