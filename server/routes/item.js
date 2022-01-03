@@ -22,5 +22,6 @@ var corsDefault = {
 
 var corsDefaultItem = {
     origin: '*',
-    methods: 'GET, DELETE, OPTIONS'
+    methods: 'GET, DELETE, OPTIONS',
+    allowedHeaders: 'Content-Type'
 }
