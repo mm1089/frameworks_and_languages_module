@@ -11,6 +11,9 @@ process.on('SIGINT', function() {
     process.exit();
 });
 
+
+var express = require('express')
+
 //Ensure server closes
 
 // serve on 0.0.0.0
