@@ -11,9 +11,8 @@
   <h4 align="center">Software Engineering</h4>
   <h4 align="center">S21U14465</h4>
   <h4 align="center">Canterbury Christ Church University</h4>
-  <h4 align="center">Canterbury, CT1 1PL, UK.</h4>
   <h5 align="center">Module Leaders: Allan Callaghan @caladees , Gordon Aiken</h5>
-  <h5>January, 2022</h5>
+  <h5>January 14, 2022</h5>
 
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>» View Code »</strong></a>
   <br />
@@ -24,7 +23,6 @@
 ## About
 
   <p align="left"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
-  <p align="left">(I have chosen the frameworks React and Express)</p>
   <p align="left"> The business requirements are captured in the provided automated test suites for both server and client.</p>
   <p align="left"> The server requirements are also detailed in an OpenAPI3 specification.</p>
   
