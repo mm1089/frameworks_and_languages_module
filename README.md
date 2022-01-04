@@ -23,10 +23,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About
 
-  <p align="center"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
-  <p align="center">(I have chosen the frameworks React and Express)</p>
-  <p align="center"> The business requirements are captured in the provided automated test suites for both server and client.</p>
-  <p align="center"> The server requirements are also detailed in an OpenAPI3 specification.</p>
+  <p align="left"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
+  <p align="left">(I have chosen the frameworks React and Express)</p>
+  <p align="left"> The business requirements are captured in the provided automated test suites for both server and client.</p>
+  <p align="left"> The server requirements are also detailed in an OpenAPI3 specification.</p>
+  
+  <div align="left">
+
+## Built Using
+
+* [React.js](https://reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Express.JS](https://expressjs.com/)
+* [GitPod IDE](https://gitpod.io)
+* [cors](https://www.npmjs.com/package/cors)
+</div>
 
 
 <div align="left">
@@ -35,7 +46,7 @@
 
 </div>
 
-<div align="center">
+<div align="left">
 
 <h5>• You must replace the example implementations with new ones that pass the **automated tests**<h5>
 <h5>• Your solutions **must run in containers on CI**</h5>
@@ -49,6 +60,7 @@ The [Example Repo](https://github.com/calaldees/frameworks_and_languages_module/
 <h5>• A reference client implementation (that uses the OpenAPI3 service server container) </h5>
 <h5>• A set of browser tests (cypress), to document the expected client/user flows </h5>
 </div>
+
 
 
 ## How to run Server and Client Implementation
@@ -82,23 +94,38 @@ To run the tests follow these simple example steps.
 5.  `pytest test_api.py --pdb`
 
 <p align="right">(<a href="#top">▲</a>)</p>
+  
+  
 
 ## Examples
+<div align="center">  
+  
+1. Responsive design, built for Mobile, small, large, xl and 2xl screens
+  
+  ![ezgif-3-44f678c0bb](https://user-images.githubusercontent.com/72493335/147995251-84b0a27c-3b91-4551-b394-c039960deab5.gif)
+  </div>
+  
 
-1. Example of storing Items
+  <p align="right">(<a href="#top">▲</a>)</p>
+  
+<div align="left">
+  
+Storing Items in a hardcoded dictionary
+  
 ```javascript
 const items = {
   1: {
       "id": 1,
-      "user_id": "mm1089",
-      "keywords": ["car", "bus", "train"],
-      "description": "assignment",
+      "user_id": "Example",
+      "keywords": ["Software", "Engineering", "Class"],
+      "description": "Assignment",
       "latitude": 1,
       "longitude": 1,
   }
 }
 ```
-2. Example of CORS
+Cross Origin Resource Sharing
+  
 ```javascript
 var corsDefault = {
     origin: '*',
@@ -106,42 +133,22 @@ var corsDefault = {
     allowedHeaders: 'Content-Type'
 }
 ```
-3. Example of Server Implementation
-4. Example of Client Implementation
-
-![image](https://user-images.githubusercontent.com/72493335/145279617-1fc89085-61e1-4d0e-8ae1-5be04e147bed.png)
-
+  </div>
 <p align="right">(<a href="#top">▲</a>)</p>
 
-# Server Features/Roadmap
+# Roadmap
 
 - [ ] Complete Implementation 
 - [ ] Pass tests
-- [ ] Communicate with Client
-- [x] CORS
-- [x] Install Express
-- [x] GET
 - [ ] POST
 - [ ] DELETE
-
-# Client Features/Roadmap
-
-- [ ] Complete Implementation
-- [ ] Pass tests
+- [x] GET
+- [x] CORS
+- [x] Install Express
 - [x] Create README.md
 - [x] Create React UI
 - [x] Style with Tailwind CSS
 
-
-<div align="left">
-
-## Built Using
-
-* [React.js](https://reactjs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Express.JS](https://expressjs.com/)
-* [GitPod IDE](https://gitpod.io)
-</div>
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
