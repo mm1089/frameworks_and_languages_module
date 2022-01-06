@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from './components/input';
+import Form from './Form';
 
 function Index() {
   return (
@@ -20,7 +20,7 @@ function Index() {
       {/* Input component used for displaying form */}
 
       <div className='Client-Form'>
-        <Input />
+        <Form />
       </div>
     </div>
     

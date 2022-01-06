@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ReactDOM from 'react-dom';
 
-function Input() {
+function Form() {
     const [input, setInput] = useState({});
 
     const EnterItem = (event) => {
@@ -131,5 +131,5 @@ function Input() {
     )
 }
 
-export default Input;
-ReactDOM.render(<Input />, document.getElementById('root'));
+export default Form;
+ReactDOM.render(<Form />, document.getElementById('root'));
