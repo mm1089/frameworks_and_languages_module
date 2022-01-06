@@ -37,6 +37,7 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     if(Object.keys(itemObj).length == 0){
         res.status(204).send('Error: 204 - There are no items with the given ID.');
         console.log(itemObj)
+        console.log('Request: ', req.method)
     }
     else{
         const UID = parseInt(req.params.itemId)
@@ -60,8 +61,12 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     
     router.post('/', cors(corsDefault), function(req, res){
         console.log()
+        console.log('Request: ', req.method)
+        //var new =
+        //if (!req.body.user_id || req.body.name.length < 1)
+        {
         /*
-        id:
+        id: item
         user_id: req.body.user_id
         description: req.body.description
         image: req.body.image
@@ -70,11 +75,19 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
         keywords: req.body.keywords
         title: req.body.title
         */
+       //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
+       //Creation of a new resource
+       //res.status(201).send('Post Created Successfully.')
+       //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
+       //res.status(405).send('Error: 405 - The post was not successful.');
+       //
+        }
     })
 
     router.delete('/:itemId', cors(corsDefaultItem), function(req, res){
-        //
+        //res.status(201).send('The item with the given ID was deleted successfully.');
         console.log()
+        //res.status(404).send('Error: 404 - The item with the given ID was not found.');
     })
 })
 

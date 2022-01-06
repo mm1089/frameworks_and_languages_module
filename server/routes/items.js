@@ -36,6 +36,7 @@ router.get('/', cors(corsDefault), function(req, res){
     //response is good
     //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
     res.status(200).json(getItemsArray)
+    console.log('Request: ', req.method)
 }
 
 })
