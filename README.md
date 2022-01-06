@@ -78,6 +78,9 @@ To get a local copy up and running follow these simple example steps.
 9.  `make server`
 10. Run PyTests
 11. <a href="#tests">PyTests</a>
+  
+  
+0. https://github.com/calaldees/teachingWorkshops/blob/master/schoolOfETD/programming_frameworks_and_languages/web-service.md CURL TEST
 
 ## How to Test Server and Client vs. Specification
 <div id="tests"></div>
