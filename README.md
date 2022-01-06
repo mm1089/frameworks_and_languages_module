@@ -9,55 +9,58 @@
 <h2 align="center">Frameworks and Languages Module</h2>
   <h4 align="center">Michael J. McLain</h4>
   <h4 align="center">Software Engineering</h4>
-  <h4 align="center">S21U14465</h4>
-  <h4 align="center">Canterbury Christ Church University</h4>
   <h5 align="center">Module Leaders: Allan Callaghan @caladees , Gordon Aiken</h5>
   <h5>January 14, 2022</h5>
 
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module"><strong>» View Code »</strong></a>
-  <br />
+  <br/>
   <a align="center" href="https://github.com/mm1089/frameworks_and_languages_module/commits/main"><strong>➥ [View Commit History] </strong></a>
 </div>
 
-<!-- ABOUT THE PROJECT -->
+
+<!-- TOC start -->
+
+## Table of Contents
+
+- [About This Project](#about)
+- [Requirements](#requirements)
+- [How to run Server and Client Implementation](#how-to-run-server-and-client-implementation)
+- [How to Test Server and Client vs. Specification](#how-to-test-server-and-client-vs-specification)
+- [Examples](#examples)
+- [Roadmap](#roadmap)
+<!-- TOC end -->
+
+
 ## About
 
   <p align="left"> The aim of this assignment is to produce a working server and client implementation to a provided specification.
   <p align="left"> The business requirements are captured in the provided automated test suites for both server and client.</p>
   <p align="left"> The server requirements are also detailed in an OpenAPI3 specification.</p>
-  
-  <div align="left">
-
-## Built Using
-
-* [React.js](https://reactjs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Express.JS](https://expressjs.com/)
-* [GitPod IDE](https://gitpod.io)
-* [cors](https://www.npmjs.com/package/cors)
-</div>
-
-
-<div align="left">
-
-## Requirements
-
 </div>
 
 <div align="left">
 
-<h5>• You must replace the example implementations with new ones that pass the **automated tests**<h5>
-<h5>• Your solutions **must run in containers on CI**</h5>
-<h5>• Your solutions must use the frameworks you researched and justified in assignment 1</h5>
+### Requirements
+
+</div>
+
+<div align="left">
 
 The [Example Repo](https://github.com/calaldees/frameworks_and_languages_module/) provides:
-<h5>• An OpenAPI3 Specification for server </h5>
-<h5>• A reference server implementation that runs in a container</h5>
-<h5>• An automated test container that tests the server implementation’s conformance to the OpenAPI3 spec. </h5>
-<h5>• The Tests run as GitHub actions as part of Continuous Integration (CI) </h5>
-<h5>• A reference client implementation (that uses the OpenAPI3 service server container) </h5>
-<h5>• A set of browser tests (cypress), to document the expected client/user flows </h5>
+<h5>• A reference server implementation that runs in a container.</h5>
+<h5>• An automated test container that tests the server implementation.</h5>
+<h5>• The Tests run as GitHub actions as part of Continuous Integration (CI).</h5>
+<h5>• A reference client implementation (that uses the OpenAPI3 service server container).</h5>
+<h5>• A set of browser tests (cypress), to document the expected client/user flows.</h5>
 </div>
+
+#### Built Using
+
+* [React.js](https://reactjs.org/) (Client Implementation)
+* [Express.JS](https://expressjs.com/) (Server Implementation)
+* [Cors](https://www.npmjs.com/package/cors) (Server Implementation)
+* [Tailwind CSS](https://tailwindcss.com/) (Client Implementation)
+* [GitPod IDE](https://gitpod.io) (Built using GitPod IDE)
 
 
 
@@ -137,7 +140,7 @@ var corsDefault = {
   </div>
 <p align="right">(<a href="#top">▲</a>)</p>
 
-# Roadmap
+## Roadmap
 
 - [ ] Complete Implementation 
 - [ ] Pass tests
