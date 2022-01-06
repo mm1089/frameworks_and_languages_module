@@ -21,7 +21,23 @@ var corsDefault = {
 //GET req
 
 router.get('/', cors(corsDefault), function(req, res){
-    res.send("You just called the post method");
+    //res.send("Get all items");
+    var getItemsArray = []
+    for (let [key, objectValues] of Object.entries(item)) {
+    getItemsArray.push(objectValues);
+    }
+    //used to return an array of items that are enumerable
+    //Resource Used: https://javascript.info/keys-values-entries
+    if(Object.keys(getItemsArray).length <= 0){
+    res.status(204).send('Error: 204 - No Items found.');
+    //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204
+    }
+    else{
+    //response is good
+    //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
+    res.status(200).json(getItemsArray)
+}
+
 })
 
 

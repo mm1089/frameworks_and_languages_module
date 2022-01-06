@@ -78,7 +78,7 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     })
 })
 
-
+//CORS preflight request?
 
 
 module.exports = router

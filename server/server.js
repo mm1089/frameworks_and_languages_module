@@ -1,74 +1,44 @@
-//const { response } = require('express');
-//const { request } = require('express');
-//const express = require('express');
-//const items = require('./items.js');
-//const bodyParser = require('body-parser');
+//Resources Used:
+//https://expressjs.com/en/api.html
+//https://expressjs.com/en/api.html#express.static
+//https://expressjs.com/en/4x/api.html
+//https://expressjs.com/en/4x/api.html#req
+
+
+// Require the server to open on port 8000
 const PORT = 8000;
-//const app = express();
-//app.use(express.json());
-//Ensure server closes
-process.on('SIGINT', function() {
-    process.exit();
-});
-
 var express = require('express')
-
+/* NOT USED CURRENTLY
+var cors = require('cors') 
+var item = require ('../items')
+*/
+var router = express.Router()
 var router_home = require('./routes/home')
 var router_item = require ('./routes/item')
 var router_items = require ('./routes/items')
-
 var server = express()
-server.use(express.json())
-server.use(express.urlencoded({ extended: false}))
 
-server.use('/', router_home)
-server.use('/item', router_item)
-server.use('/', router_items)
-
-//Resources Used: https://expressjs.com/en/api.html
+//require item Objects from ../items
+//require the express package
+//require the cors package
 //express.urlencoded() is required when submitting a form with post method
 //as it recognizes the incoming Request Object as a string or array
-//If extended is false, you can not post a "nested object" based on body-parser. 
+//If extended is false, you can not post a "nested object" based on body-parser.
+//route - specify thr path or url with '/'
+
+server.use(express.urlencoded({ extended: false}))
+server.use(express.json())
+server.use('/', router_home)
+server.use('/item', router_item)
+server.use('/items', router_items)
 
 
 //server.use(express.static('public', options))
 
-//Express.Static
-//This is a built-in middleware function in Express.
+//Express.Static is a built-in middleware function in Express.
 //Resources Used: https://expressjs.com/en/api.html#express.static
 
-
-
-// serve on 0.0.0.0
-//load express module
-//express function / app object for methods like GET POST PUT DELETE
-//callback function two arguments request and response
-//referred to "https://expressjs.com/en/4x/api.html"
-//resource used "https://expressjs.com/en/4x/api.html#req"
-//route - specify thr path or url with '/'
-//callback function which is referred to as a route handler
-
 /*
-    app.use(bodyParser.urlencoded({ extended: false}));
-    app.use(bodyParser.json());
-    app.use(express.json());
-
-
-app.get('/', (req, res) => {
-    console.log(res.header);
-    console.log(res.json);
-    res.send("FreeCycle API Implementation for Allan's assignment 2");
-    res.send();
-    //if (X) res.status(404).send('Error: 404 - The item was not found.');
-});
-
-app.options('/',(req, res)=>{
-    res.status(204).send("ok");
-});
-
-//req - incoming
-//res - outgoing
-
 app.use('/item/:item_id', (req, res, next) => {
     console.log('Request: ', req.method)
     next()
@@ -94,19 +64,6 @@ app.get('/items/:item_id', (req, res) => {
     }
 });
 
-// Error 404 - object not found
-// Error 400 - bad request
-
-/* How to run TESTS
-1  cd server_test/
-3  pytest test_api.py 
-4  pip install pytest
-5  pytest test_api.py 
-6  pytest test_api.py --pdb
-
-https://github.com/calaldees/teachingWorkshops/blob/master/schoolOfETD/programming_frameworks_and_languages/web-service.md
-CURL TEST
-
 
 app.post('/item/', (req, res) => {
     const items = req.body.item;
@@ -121,7 +78,6 @@ app.post('/item/', (req, res) => {
     res.status(200);
 });
 
-// In future the ID will be assigned by a database, I have to create here
 
 app.put('/items/:item_id', (req, res) => {
     //if item doesn't exist then throw a 404
@@ -170,16 +126,13 @@ app.delete('/delete/:item_id', (res, req)=> {
 })
 
 */
-//port handling
-//if set use this, if not use 3000, store result in const
-//assign a port of 3000 permanently
-
+//encapsulating in `` allows javascript code to be used in string
 server.listen(
     PORT, () => console.log(`Open on PORT: ${PORT}`)
 );
 
+//Ensure server closes
+process.on('SIGINT', function() {
+    process.exit();
+});
 
-//encapsulating in `` allows javascript code to be used in string
-//browser window shows Testing Allan Assignment on blank page
-//this is working as intended
-//node server.js to run

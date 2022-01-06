@@ -107,7 +107,6 @@ function Input() {
                     </div>
                     </div>
                 </div>
-
                 <div className="lg:w-1/2 md:w-2/3 mx-auto">
                     <div className="flex flex-wrap -m-2">
                     <div className="p-2 w-1/2">
@@ -119,18 +118,14 @@ function Input() {
                         defaultValue={input.description || "" }
                         className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
                     </label>
+                    <div className="pt-5 pl-5 pr-5">
+                    <input className="hover:bg-green-100 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Submit" />
+                    </div>
                     </div>
                     </div>
                     </div>
                 </div>
-
-                
-
-
         </form>
-        </div>
-        <div className="p-4 rounded-full m-1 bg-green-100 w-52 mb-2 p-2">
-        <p className="text-gray-800 items-end text-xs font-semibold">[React Sub-Component "Items"]</p>
         </div>
         </section>
     )
