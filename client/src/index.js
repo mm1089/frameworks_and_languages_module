@@ -9,7 +9,6 @@ function Index() {
         <span role="img" aria-label="loc-pin" className="pl-4 pr-4 pt-2 text-2xl text-red-500">&#128205;</span>
         <h1 className="text-2xl font-medium pl-4 pr-4 pb-4"> FreeCycle</h1>
           <div className="pl-4 rounded-full b-2 p-2 bg-green-100 w-52 mb-2 p-2">
-            <p className="text-gray-800 font-medium items-end text-xs m-1">[React Main-Component "App"]</p>
           </div>
           <div>
           </div>

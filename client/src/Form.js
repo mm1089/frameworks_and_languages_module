@@ -118,8 +118,14 @@ function Form() {
                         defaultValue={input.description || "" }
                         className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
                     </label>
-                    <div className="pt-5 pl-5 pr-5">
-                    <input className="hover:bg-green-100 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Submit" />
+                    <div className="pt-5">
+                    <input className="w-32 hover:bg-red-200 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Prev Record"/>
+                    <input className="w-32 hover:bg-green-200 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Next Record"/>
+                    </div>
+                    <div className="pt-5">
+                    <input className="w-32 hover:bg-red-300 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Delete Record"/>
+                    <div className="pt-5"></div>
+                    <input className="w-32 hover:bg-green-100 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Submit Record"/>
                     </div>
                     </div>
                     </div>
