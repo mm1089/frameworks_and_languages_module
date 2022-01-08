@@ -1,6 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 const itemObj = require ('../items')
+const item = require('../items')
 var router = express.Router()
 
 //require hardcoded items
@@ -84,10 +85,20 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
         }
     })
 
+        //https://www.tutorialspoint.com/express-js-app-delete-method
+
     router.delete('/:itemId', cors(corsDefaultItem), function(req, res){
-        //res.status(201).send('The item with the given ID was deleted successfully.');
-        console.log()
-        //res.status(404).send('Error: 404 - The item with the given ID was not found.');
+        var store = parseInt(req.params.itemId)
+        //returns a boolean to specify property as its own property
+        //faster method using Object.HasOwn
+        if(item.hasOwn(store)){
+            delete item[store]
+            res.status(201).send('The item with the given ID was deleted successfully.');
+        }
+        else{
+            console.log()
+            res.status(404).send('Error: 404 - The item with the given ID was not found.');
+        }
     })
 })
 
