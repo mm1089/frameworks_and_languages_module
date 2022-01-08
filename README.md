@@ -104,7 +104,7 @@ To run the tests follow these simple example steps.
 ## Examples
 <div align="center">  
   
-1. Responsive design, built for Mobile, small, large, xl and 2xl screens
+Responsive design, built for Mobile, small, large, xl and 2xl screens
   
   ![ezgif-3-44f678c0bb](https://user-images.githubusercontent.com/72493335/147995251-84b0a27c-3b91-4551-b394-c039960deab5.gif)
   </div>
@@ -139,6 +139,12 @@ var corsDefault = {
 ```
   </div>
 <p align="right">(<a href="#top">▲</a>)</p>
+
+Successful Fetch Request From backend to return an array of Items!
+
+![Untitled](https://user-images.githubusercontent.com/72493335/148648492-e4539696-acda-49a3-a75f-5b25e1b8352d.png)
+
+
 
 ## Roadmap
 
