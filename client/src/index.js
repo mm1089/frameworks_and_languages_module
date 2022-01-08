@@ -16,6 +16,12 @@ function Index() {
         event.preventDefault();
         alert(input)
     }
+
+
+    fetch('https://8000-orange-cricket-qlupjq9k.ws-eu25.gitpod.io/items')
+    .then(res => res.json())
+    .then(data => console.log(data))
+
     return(
         <section className="rounded border ml-12 mr-12 mb-8 bg-gray-100 text-gray-600 body-font relative ">
             <div className="container px-5 py-24 mx-auto">
@@ -130,6 +136,10 @@ function Index() {
                     </div>
                     </div>
                     </div>
+
+                    <section>
+                        <h1>TESTING</h1>
+                    </section>
                 </div>
         </form>
         </div>
