@@ -18,7 +18,7 @@ var corsDefault = {
     allowedHeaders: 'Content-Type'
 }
 
-//GET req
+//GET req to gather all items from Items.js
 
 router.get('/', cors(corsDefault), function(req, res){
     //res.send("Get all items");
@@ -37,6 +37,7 @@ router.get('/', cors(corsDefault), function(req, res){
     //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
     res.status(200).json(getItemsArray)
     console.log('Request: ', req.method)
+     
 }
 
 })

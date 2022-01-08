@@ -6,8 +6,6 @@ var router = express.Router()
 //require the express package
 //require the cors package
 //Resource Used:
-//https://www.npmjs.com/package/cors -- CORS SETUP
-//https://www.youtube.com/watch?v=h-WtIT6gCBk -- CORS 
 //https://node-cors-client.netlify.app/
 //Working Example of CORS w/ React Express
 //https://expressjs.com/en/api.html#express.router
