@@ -1,7 +1,6 @@
 var express = require('express')
 var cors = require('cors')
 const itemObj = require ('../items')
-const item = require('../items')
 var router = express.Router()
 
 //require hardcoded items
@@ -11,6 +10,8 @@ var router = express.Router()
 //https://www.npmjs.com/package/cors
 //https://www.youtube.com/watch?v=PNtFSVU-YTI
 //Cross-Origin Resource Sharing (CORS) Default Setup
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
 
 var corsDefault = {
     origin: '*',
@@ -35,7 +36,7 @@ var corsDefaultItem = {
 
 
 router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
-    if(Object.keys(itemObj).length == 0){
+    if(Object.entries(itemObj).length == 0){
         res.status(204).send('Error: 204 - There are no items with the given ID.');
         console.log(itemObj)
         console.log('Request: ', req.method)
@@ -59,29 +60,33 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     //Object keys, values, and entries methods https://www.youtube.com/watch?v=VmicKaGcs5g
     //Object.keys vs Object.values vs Object.entries https://www.youtube.com/watch?v=3s0YFgxuOV0
     //Testing Multiple Item Objects: https://prnt.sc/25v8vua
+    //https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/
+    //Return largest number within an array
     
     router.post('/', cors(corsDefault), function(req, res){
-        console.log()
-        console.log('Request: ', req.method)
-        //var new =
-        //if (!req.body.user_id || req.body.name.length < 1)
-        {
-        /*
-        id: item
-        user_id: req.body.user_id
-        description: req.body.description
-        image: req.body.image
-        latitude: req.body.latitude
-        longitude: req.body.longitude
-        keywords: req.body.keywords
-        title: req.body.title
-        */
-       //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
-       //Creation of a new resource
-       //res.status(201).send('Post Created Successfully.')
-       //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
-       //res.status(405).send('Error: 405 - The post was not successful.');
-       //
+        const content =request.body
+        //Returns the largest number for the sub-array with Math.max() method
+        var findLargestItem = Math.max.apply("",Object.entries(itemObj))
+        var createNewItem = findLargestItem + 1
+        console.log(content)
+        console.log('Request: ', request.method)
+        
+        itemObj[createNewItem] = {
+            id: createNewItem,
+            user_id: req.body.user_id,
+            description: req.body.description,
+            image: req.body.image,
+            latitude: req.body.latitude,
+            longitude: req.body.longitude,
+            keywords: req.body.keywords,
+            title: req.body.title,
+        }
+        console.log(createNewItem)
+        console.log('Request: ', request.method)
+        res.status(201).send('Post Created Successfully.')
+        //else
+        //res.status(405).send('Error: 405 - The post was not successful.');
+
         }
     })
 
@@ -91,8 +96,8 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
         var store = parseInt(req.params.itemId)
         //returns a boolean to specify property as its own property
         //faster method using Object.HasOwn
-        if(item.hasOwn(store)){
-            delete item[store]
+        if(itemObj.hasOwn(store)){
+            delete itemObj[store]
             res.status(201).send('The item with the given ID was deleted successfully.');
         }
         else{
