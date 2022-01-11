@@ -64,9 +64,9 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     //Return largest number within an array
     
     router.post('/', cors(corsDefault), function(req, res){
-        const content =request.body
+        const content = request.body
         //Returns the largest number for the sub-array with Math.max() method
-        var findLargestItem = Math.max.apply("",Object.entries(itemObj))
+        var findLargestItem = Math.max.apply(null,Object.entries(itemObj))
         var createNewItem = findLargestItem + 1
         console.log(content)
         console.log('Request: ', request.method)
