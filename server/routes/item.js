@@ -83,12 +83,11 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
         }
         console.log(createNewItem)
         console.log('Request: ', request.method)
-        res.status(201).send('Post Created Successfully.')
+        res.status(201).json(itemObj[createNewItem])
         //else
         //res.status(405).send('Error: 405 - The post was not successful.');
 
-        }
-    })
+        })
 
         //https://www.tutorialspoint.com/express-js-app-delete-method
 
