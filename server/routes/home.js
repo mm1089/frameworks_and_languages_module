@@ -28,6 +28,9 @@ app.listen(port, (error) => {
   if (error) {
     console.log("The server has encountered a problem: ", error);
     return;
+  }
+  console.log(`Server is listening on port 8000...`)
+})
 
 
 router.options('/', cors (corsOptions))
