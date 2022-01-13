@@ -1,6 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 const itemObj = require ('../items')
+const items = require('../items')
 var router = express.Router()
 
 //require hardcoded items
@@ -28,31 +29,21 @@ var corsDefaultItem = {
     methods: 'GET, DELETE, OPTIONS',
     allowedHeaders: 'Content-Type'
 }
-//test
+
 //GET an item
 //Tested 03.01.22 Working as expected.
 //https://prnt.sc/25uobh2
 //This is a similar way to how I did it before on server.js which will have its contents spliced and moved here
 
 
-router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
-    if(Object.entries(itemObj).length == 0){
+router.get('/:itemId', cors(corsDefaultItem), function(req, res){
+    var empty = Object.entries(itemObj).length == 0;
+    if(empty){
         res.status(204).send('Error: 204 - There are no items with the given ID.');
         console.log(itemObj)
         console.log('Request: ', req.method)
     }
-    else{
-        const UID = parseInt(req.params.itemId)
-        if(itemObj.hasOwnProperty(UID)){
-            console.log(req.params.itemId)
-            const singleItem = itemObj[UID]
-            res.json(singleItem)
-            console.log(singleItem)
-        }
-        else{
-            res.status(404).send('Error: 404 - The item with the given ID was not found.');
-        }
-    }
+
     //Object Keys allows me to enumerate the specified object's properties. alternative method = for loop.
     //Object.keys returns an array of the properties, print information from itemObj Object.
     //Allows me to turn an object into something that is iterable so i can use with JS functions.
@@ -62,17 +53,14 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
     //Testing Multiple Item Objects: https://prnt.sc/25v8vua
     //https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/
     //Return largest number within an array
+    //https://stackoverflow.com/questions/20784046/get-max-value-from-javascript-dictionary-object
     
     router.post('/', cors(corsDefault), function(req, res){
-        const content = request.body
-        //Returns the largest number for the sub-array with Math.max() method
-        var findLargestItem = Math.max.apply(null,Object.entries(itemObj))
-        var createNewItem = findLargestItem + 1
-        console.log(content)
-        console.log('Request: ', request.method)
-        
-        itemObj[createNewItem] = {
-            id: createNewItem,
+        var Index = Math.max.apply(null,Object.entries(itemObj))
+        var createID = maxIndex + 1
+        const createItem =
+        {
+            id: createID,
             user_id: req.body.user_id,
             description: req.body.description,
             image: req.body.image,
@@ -80,25 +68,29 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
             longitude: req.body.longitude,
             keywords: req.body.keywords,
             title: req.body.title,
+            date_from: new Date(),
+            date_to: new Date(),
         }
-        console.log(createNewItem)
+        res.status(201).send('Post Created Successfully.')
         console.log('Request: ', request.method)
-        res.status(201).json(itemObj[createNewItem])
-        //else
-        //res.status(405).send('Error: 405 - The post was not successful.');
 
-        })
+        if (!newItem.user_id || !newItem.keywords || !newItem.description || !newItem.latitude || !newItem.longitude || !newItem.title) {
+            return res.status(405).send('Error: 405 - The post was not successful.');
+        }
+        else{
+        itemObj[createItem.id] = createItem
+        return res.status(201).send("Item successfully created.")
+        }
+    })
 
         //https://www.tutorialspoint.com/express-js-app-delete-method
 
     router.delete('/:itemId', cors(corsDefaultItem), function(req, res){
-        var store = parseInt(req.params.itemId)
-        //returns a boolean to specify property as its own property
-        //faster method using Object.HasOwn
-        if(itemObj.hasOwn(store)){
-            delete itemObj[store]
-            res.status(201).send('The item with the given ID was deleted successfully.');
+        var empty = Object.entries(itemObj).length == 0
+        if (empty) {
+            return res.status(200).send('The item with the given ID was not found.');
         }
+        //returns a boolean to specify property as its own property
         else{
             console.log()
             res.status(404).send('Error: 404 - The item with the given ID was not found.');
@@ -107,6 +99,10 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res, next){
 })
 
 //CORS preflight request?
+// https://github.com/nodejs/node/issues/4182
+process.on('SIGINT', function () {
+    process.exit();
+  });
 
 
 module.exports = router
