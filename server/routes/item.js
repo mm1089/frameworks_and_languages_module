@@ -28,7 +28,7 @@ var corsDefaultItem = {
     methods: 'GET, DELETE, OPTIONS',
     allowedHeaders: 'Content-Type'
 }
-
+//test
 //GET an item
 //Tested 03.01.22 Working as expected.
 //https://prnt.sc/25uobh2
