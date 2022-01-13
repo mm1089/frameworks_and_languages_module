@@ -1,7 +1,7 @@
 var express = require('express')
 var cors = require('cors')
-
 var router = express.Router()
+
 //Express Router
 //require the express package
 //require the cors package
@@ -23,6 +23,11 @@ var corsOptions = {
   AllowedHeaders: 'Content-Type',
   optionsSuccessStatus: 204
 }
+
+app.listen(port, (error) => {
+  if (error) {
+    console.log("The server has encountered a problem: ", error);
+    return;
 
 
 router.options('/', cors (corsOptions))

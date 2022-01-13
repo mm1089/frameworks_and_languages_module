@@ -3,6 +3,7 @@ var cors = require('cors')
 const itemObj = require ('../items')
 const items = require('../items')
 var router = express.Router()
+const port = 8000
 
 //require hardcoded items
 //require the express package
@@ -54,9 +55,10 @@ router.get('/:itemId', cors(corsDefaultItem), function(req, res){
     //https://www.freecodecamp.org/news/three-ways-to-return-largest-numbers-in-arrays-in-javascript-5d977baa80a1/
     //Return largest number within an array
     //https://stackoverflow.com/questions/20784046/get-max-value-from-javascript-dictionary-object
+    //Find max Index in the dictionary of items.
     
     router.post('/', cors(corsDefault), function(req, res){
-        var Index = Math.max.apply(null,Object.entries(itemObj))
+        var MaxID = parseInt(Object.entries(items).reduce((a, b) => items[a] > items[b] ? a : b)) + 1;
         var createID = maxIndex + 1
         const createItem =
         {
