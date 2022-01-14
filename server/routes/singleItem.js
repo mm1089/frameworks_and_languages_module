@@ -49,16 +49,16 @@ var router = express.Router()
 //Create an Item
 //Object Entries allows me to enumerate the Object's properties.
 //Find The Maximum Index within the dictionary of items in order to create a new higher Index.
-//Create a New Item object with all Parameters listed
+//Create a New Item variable with all Parameters listed
 //Check If the New Item object is not missing any of the specified fields
 //Else Create new item object and send response of successful creation
     
     router.post('/', cors(corsOptions), function(req, res){
-        var MaxID = parseInt(Object.entries(items).reduce((a, b) => items[a] > items[b] ? a : b)) + 1;
-        var createID = maxIndex + 1
+        var MaxID = parseInt(Object.keys(itemObj).reduce((a, b) => itemObj[a] > itemObj[b] ? a : b)) + 1;
+       
         const createItem =
         {
-            id: createID,
+            id: MaxID,
             user_id: req.body.user_id,
             description: req.body.description,
             image: req.body.image,
@@ -66,18 +66,16 @@ var router = express.Router()
             longitude: req.body.longitude,
             keywords: req.body.keywords,
             title: req.body.title,
-            date_from: new Date(),
-            date_to: new Date(),
+            date_from: new Date,
+            date_to: new Date,
         }
-        res.status(201).send('Post Created Successfully.')
+        res.status(201).json({msg:'Post Created Successfully.', createItem})
 
-        if (!newItem.user_id || !newItem.keywords || !newItem.description || !newItem.latitude || !newItem.longitude || !newItem.title) {
-            return res.status(405).send('Error: 405 - The post was not successful.');
+        if (!createItem.user_id || !createItem.keywords || !createItem.description || !createItem.latitude || !createItem.longitude) {
+            return res.status(405).send('Error: 405 - Method Not Allowed.');
         }
-        else{
         itemObj[createItem.id] = createItem
-        return res.status(201).send("Item successfully created.")
-        }
+        return res.status(201).json({msg: 'Item Created', createItem })
     })
 
 //      DELETE REQUEST      //
