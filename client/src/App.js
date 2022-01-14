@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header"
 import Items from "./components/Items";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -31,11 +32,7 @@ function App() {
           <Header />
           <Items />
         </div>
-
-        <div>
-        </div>
-
-
+        <Footer />
       </section>
     )
   }
