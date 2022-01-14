@@ -1,10 +1,18 @@
-FROM node:slim
+FROM node
 
-WORKDIR /app/
+#Directory
+WORKDIR /server/
 
-COPY package.json .
+#App Dependencies
+COPY package*.json ./
+
 RUN npm install
 
+#bundling source app
 COPY . .
 
-ENTRYPOINT ["node", "server.js"]
+#Expose Port 8000
+EXPOSE 8000
+
+#How to run
+CMD ["node", "server.js"]
