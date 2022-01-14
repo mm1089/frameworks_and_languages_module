@@ -15,7 +15,7 @@ function App() {
     }, [])
   
     const fetchItems = async() =>{
-      const res = await fetch('/items');
+      const res = await fetch('https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/items');
       const data = await res.json();
       const dataArray = [];
       for (let item of Object.values(data)) {
