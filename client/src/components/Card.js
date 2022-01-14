@@ -3,7 +3,7 @@ import React from "react"
 function Card({ image, id, user_id, latitude, longitude, keywords, description, date_from }) {
     return (
 <div class="m-12 flex justify-center">
-  <div class="rounded-lg shadow-lg bg-white max-w-sm">
+  <div class="rounded-lg shadow-lg bg-gray-50 max-w-sm">
     <a href="#!">
       <img class="rounded-lg object-fill" src={image} alt=""/>
     </a>
