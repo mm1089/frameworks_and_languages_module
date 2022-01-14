@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Items from "./components/Item";
+import Header from "./components/Header"
+import Items from "./components/Items";
 
 
 function App() {
@@ -25,10 +26,18 @@ function App() {
     const [items, setItems] = useState([]);
   
     return (
-      <div>
+      <section className="bg-gray-50">
+      <div className="">
+          <Header />
           <Items />
-      </div>
-    );
+        </div>
+
+        <div>
+        </div>
+
+
+      </section>
+    )
   }
   
   export default App;
