@@ -1,46 +1,46 @@
+var itemObj = require ('../items')
 var express = require('express')
 var cors = require('cors')
-var item = require ('../items')
 var router = express.Router()
 
-//require hardcoded items
-//require the express package
-//require the cors package
-//Resources Used: 
-//https://www.npmjs.com/package/cors
-//https://www.youtube.com/watch?v=PNtFSVU-YTI
-//Cross-Origin Resource Sharing (CORS) Default Setup
-//CORS package is used for solving the CORS policy issue in express.js
+//Require ./Items
+//Require the Express package
+//Require the CORS package
+//CORS NPM package is used for solving the CORS policy issue in express.js
 
-var corsDefault = {
+//      CORS SETUP      //
+
+var corsOptions = {
     origin: '*',
     methods:'GET, POST, OPTIONS',
     allowedHeaders: 'Content-Type'
 }
 
-//GET req to gather all items from Items.js
-
-router.get('/', cors(corsDefault), function(req, res){
-    //res.send("Get all items");
-    var getItemsArray = []
-    for (let [key, objectValues] of Object.entries(item)) {
-    getItemsArray.push(objectValues);
+//      GET REQUEST FOR ALL ITEMS       //
+//Object Entries are used to return an array of items that are enumerable
+//If Array Length Less than or Equal to 0 send error
+//For loop to get items from array
+//Resolve json
+router.get('/', cors(corsOptions), function(req, res){
+    var converted = []
+    for (let [retrieve, objectValues] of Object.entries(itemObj)) {
+        converted.push(objectValues);
     }
-    //used to return an array of items that are enumerable
-    //Resource Used: https://javascript.info/keys-values-entries
-    if(Object.keys(getItemsArray).length <= 0){
+    if(Object.keys(converted).length <= 0){
     res.status(204).send('Error: 204 - No Items found.');
-    //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204
     }
     else{
-    //response is good
-    //https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
-    res.status(200).json(getItemsArray)
-    console.log('Request: ', req.method)
-     
+    res.status(200).json(converted)
+    console.log(req.method, ('ALL ITEMS REQUEST'))
 }
 
 })
 
-
 module.exports = router
+
+//Resource Used:
+//https://javascript.info/keys-values-entries
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/204
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200
+//https://www.npmjs.com/package/cors
+//https://www.youtube.com/watch?v=PNtFSVU-YTI

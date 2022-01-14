@@ -2,20 +2,11 @@ var express = require('express')
 var cors = require('cors')
 var router = express.Router()
 
-//Express Router
-//require the express package
-//require the cors package
-//Resource Used:
-//https://node-cors-client.netlify.app/
-//Working Example of CORS w/ React Express
-//https://expressjs.com/en/api.html#express.router
-//https://expressjs.com/en/api.html#router.route 
-//Working Test 03.01.22
-//https://prnt.sc/25uhxg2
+//    SETUP   //
+//Require the Express package
+//Require the CORS package
 
-router.get('/', function(req, res, next) {
-  res.send("Home Page for Allan's Assignment")
-})
+//    CORS SETUP    //
 
 var corsOptions = {
   origin: '*',
@@ -24,8 +15,19 @@ var corsOptions = {
   optionsSuccessStatus: 204
 }
 
+//    GET REQUEST DEFAULT   //
+
+router.get('/', function(req, res, next) {
+  res.send("Home Page for Allan's Assignment")
+})
 
 
+//    CORS OPTIONS    //
+//CORS requests can be ‘complex’ and require an OPTIONS request (pre-flight request)
 router.options('/', cors (corsOptions))
-
 module.exports = router;
+
+//Resources Used:
+//https://node-cors-client.netlify.app/
+//https://expressjs.com/en/api.html#express.router
+//https://expressjs.com/en/api.html#router.route
