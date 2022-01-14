@@ -22,6 +22,7 @@ var corsOptions = {
 //For loop to get items from array
 //Resolve json
 router.get('/', cors(corsOptions), function(req, res){
+    console.log(req.method, ('ALL ITEMS REQUEST'))
     var converted = []
     for (let [retrieve, objectValues] of Object.entries(itemObj)) {
         converted.push(objectValues);
@@ -31,7 +32,6 @@ router.get('/', cors(corsOptions), function(req, res){
     }
     else{
     res.status(200).json(converted)
-    console.log(req.method, ('ALL ITEMS REQUEST'))
 }
 
 })
