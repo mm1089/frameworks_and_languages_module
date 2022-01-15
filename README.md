@@ -97,8 +97,18 @@ To run the tests follow these simple example steps.
 
 ### Examples
 
+Fully responsive design built with user accessibility in mind
+
+![Hnet-image](https://user-images.githubusercontent.com/72493335/149628764-7c414e09-dfac-44d4-82f6-796b5440188f.gif)
+
 Successful fetch request from Express Server, as demonstrated by the array of Items.Js in the client side Console
+
 <img src="https://user-images.githubusercontent.com/72493335/148648492-e4539696-acda-49a3-a75f-5b25e1b8352d.png" width=75% height=75%/>
+
+Demonstration of Item Object Cards that are fully responsive
+
+<img src="https://user-images.githubusercontent.com/72493335/149628169-b63063c3-a3ad-4ae1-b24e-93b2ec5db9e7.png" width=50% height=50%/>
+
 
 <p align="right">(<a href="#top">▲</a>)</p>
 
