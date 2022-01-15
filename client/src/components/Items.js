@@ -1,22 +1,16 @@
 import React from "react"
 
-function Items() {
+//Importing React
 
-    const Item = ({item}) => {
+function Items({ items}) {
+
+    const Item = ({items}) => {
 
     }
-
-
-    /*
-                <p>Username: {item.user_id}</p>
-                <p>Latitude: {item.latitude}</p>
-                <p>Longitude: {item.longitude}</p>
-                <p>Keywords: {item.keywords}</p> 
-                
-                <p>Description: {item.description}</p>
-                <p>Date posted: {item.date_from}</p>
-    */
-
+//      INPUTS      //
+//Visual Elements for Input
+//Styled with Tailwind
+//Including Animations and Events
     return(
         <section className="rounded border ml-12 mr-12 mb-8 bg-gray-100 text-gray-600 body-font relative ">
         <div className="container px-5 py-8 mx-auto">
@@ -114,6 +108,7 @@ function Items() {
                 </div>
                 </div>
                 </div>
+                <input className="mt-4 mb-4 w-48 hover:bg-green-500 hover:text-gray-800 transition ease-out duration-300 ml-2 font-bold focus:outline-none active:scale-95 hover:shadow-md cursor-pointer bg-gray-200 rounded-md p-2 "type="submit" value="Create New Item"/>
             </div>
     </form>
     </div>

@@ -1,4 +1,9 @@
 import React from "react"
+//    SETUP   //
+//Importing React 
+
+//    CARDS   //
+//Visual elements to style the cards
 
 function Card({ image, id, user_id, latitude, longitude, keywords, description, date_from }) {
     return (
@@ -23,3 +28,5 @@ function Card({ image, id, user_id, latitude, longitude, keywords, description, 
 }
 
 export default Card
+
+//Exporting Component

@@ -5,28 +5,46 @@ import Footer from "./components/Footer";
 import Card from "./components/Card";
 
 
+//    SETUP   //
+//Importing React useState and useEffect
+//Importing Components
+
+//    FETCH REQUEST   //
+//Fetch from Express Server as the page loads
+//Fetch items from Express Server
+//Get and Set State
+//Convert data from array
+
 function App() {
 
     useEffect(() => {
       const getItems = async() =>{
         const items = await fetchItems();
-        setItems(items);
+        setItems(items)
       }
-      getItems();
+      getItems()
     }, [])
   
     const fetchItems = async() =>{
-      const res = await fetch('https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/items');
-      const data = await res.json();
-      const dataArray = [];
+      const res = await fetch('https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/items')
+      const data = await res.json()
+      const dataArray = []
       for (let item of Object.values(data)) {
-        dataArray.push(item);
+        dataArray.push(item)
       }
-      return dataArray;
+      return dataArray
     }
   
-    const [items, setItems] = useState([]);
-  
+    const [items, setItems] = useState([])
+
+
+//    DELETE    //
+    //const delete = await fetch(`https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/item/${id}`)
+
+//    PLACEHOLDER CARDS   //
+//Created "Dummy" Cards
+//Supplied with filler info
+//Styled with Tailwind
     return (
       <section className="bg-gray-100">
         <Header />
@@ -38,11 +56,11 @@ function App() {
               <Card image="http://placekitten.com/g/500/500" id="8" user_id="Alex" longitude="1.8262" latitude="0.2315" keywords="4, 2, 1" description="Testing Cards" date_from="2022-08-24"/>
               <Card image="http://placekitten.com/g/700/700" id="9" user_id="Freya" longitude="1.3511" latitude="0.0363" keywords="4, 4, 4" description="Testing Cards" date_from="2022-08-24"/>
             </section>
-          <Items />
+          <Items/>
         </div>
         <Footer />
       </section>
     )
   }
 
-    export default App;
+    export default App
