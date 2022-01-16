@@ -1,11 +1,19 @@
 import React from "react"
+import { useState } from "react"
 
 //Importing React
-
 function Items({ items}) {
 
     const Item = ({items}) => {
-
+            /*
+    const user_id, user_id = useState("")
+    const latitude = useState("")
+    const longitude = useState("")
+    const image = useState("")
+    const keywords = useState([])
+    const description = useState("")
+    */
+//Update State
     }
 //      INPUTS      //
 //Visual Elements for Input

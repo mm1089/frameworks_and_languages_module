@@ -80,14 +80,14 @@ var router = express.Router()
 
 //      DELETE REQUEST      //
 //Check if Object is Empty If it is send an error
-//NOT FINISHED
+//Checks if it is empty
+//Search for ID and Delete
 
     router.delete('/:itemId', cors(corsOptionSingle), function(req, res){
         var empty = Object.entries(itemObj).length == 0
         if (empty) {
             return res.status(200).send('The item with the given ID was not found.');
         }
-        //returns a boolean to specify property as its own property
         else{
             console.log()
             res.status(404).send('Error: 404 - The item with the given ID was not found.');

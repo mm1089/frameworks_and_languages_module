@@ -32,15 +32,30 @@ function App() {
       for (let item of Object.values(data)) {
         dataArray.push(item)
       }
-      return dataArray
+      setItems(dataArray)
     }
-  
     const [items, setItems] = useState([])
-
-
 //    DELETE    //
-    //const delete = await fetch(`https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/item/${id}`)
-
+//Deletes an item from the server
+//Fetches from the Express Backend
+//Need to update state check for errors
+      const delItem = async(id) =>{
+        const delItem = await fetch(`https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/item/${id}`, {
+          method: 'DELETE'
+        })
+      }
+//    POST    //
+//Add an item to the server
+//Fetches from Express Backend
+//Add items and update the client state
+//Method declared to fix an issue
+      const postItem = async (item) => {
+        await fetch ("https://8000-orange-cricket-qlupjq9k.ws-eu27.gitpod.io/item", {
+          method: 'POST'
+        })
+      }
+      fetchItems()
+    
 //    PLACEHOLDER CARDS   //
 //Created "Dummy" Cards
 //Supplied with filler info

@@ -1,4 +1,4 @@
-FROM node
+FROM node:alpine
 
 WORKDIR /app/
 
@@ -7,4 +7,6 @@ RUN npm install
 
 COPY . .
 
-ENTRYPOINT ["node", "server.js"]
+RUN npm i
+
+ENTRYPOINT ["yarn", "start"]

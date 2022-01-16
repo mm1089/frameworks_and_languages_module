@@ -1,14 +1,11 @@
-DOCKER_IMAGE:=server
+DOCKER_IMAGE:=client
 
 build:
 	docker build --tag ${DOCKER_IMAGE} .
 
-run_local:
-	node server.js
+run:
+	docker run --rm -it --publish 8001:8001 ${DOCKER_IMAGE}
 
 
 test:
 	docker run --rm ${DOCKER_IMAGE}
-
-
-	///DEBUG=myapp:* npm start
